@@ -354,6 +354,13 @@ a {
       max-width: 700px;
     }
 
+    .news-title {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(1.65rem, 3.2vw, 2.55rem);
+      font-weight: 800;
+      line-height: 1.17;
+    }
+
     .story-meta {
       color: var(--timpa-muted);
       font-size: .72rem;
@@ -361,6 +368,31 @@ a {
 
     .hero-image .story-meta {
       color: rgba(255, 255, 255, .78);
+    }
+
+.sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      height: 100%;
+    }
+
+    .sidebar .shopee-ad {
+      align-items: center;
+      flex: 1 1 auto;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 260px;
+      text-align: center;
+    }
+
+    .sidebar .shopee-ad-copy {
+      align-items: center;
+      flex: 0 1 auto;
+    }
+
+    .sidebar .shopee-ad-cta {
+      flex: 0 0 auto;
     }
 
 .side-story {
