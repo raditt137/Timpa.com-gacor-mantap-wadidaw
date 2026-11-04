@@ -1,0 +1,596 @@
+<!doctype html> 
+<html lang="id"> 
+<head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Pencarian berita | Timpa.com</title> 
+  
+  <!-- CSS Bootstrap 5.3.3 dari CDN --> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  
+
+<link rel="stylesheet" href="style.css">
+  
+</head> 
+<body> 
+  
+  <div class="utility-bar">
+    <div class="container d-flex justify-content-between py-2">
+      <span>Senin, 2 November 2026</span>
+      <span class="d-none d-sm-inline">Berita hari ini, untuk semua</span>
+    </div>
+  </div>
+
+  <header class="container brand-row d-flex align-items-center justify-content-between">
+    <a class="d-inline-flex flex-column" href="index.html" aria-label="Timpa.com beranda">
+      <span class="brand-mark">Timpa<span>.com</span></span>
+      <span class="brand-tagline">Tajam · Terpercaya · Terdepan</span>
+    </a>
+    <form class="d-flex align-items-center flex-grow-1 ms-4 border-dark" role="search" action="search-page.html" method="get">
+      <label class="visually-hidden" for="site-search">Cari berita</label>
+      <input class="form-control search-input" id="site-search" type="search" name="q" value="Prabowo" placeholder="Cari berita..." aria-label="Cari berita">
+    </form>
+    <div class="dropdown profile-dropdown ms-2">
+      <button class="btn login-button d-inline-flex align-items-center justify-content-center p-2" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Buka menu akun">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"></circle>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 21a7 7 0 0 1 14 0"></path>
+        </svg>
+      </button>
+      <div class="dropdown-menu dropdown-menu-end profile-menu">
+        <div class="profile-menu-header">
+          <span class="profile-avatar" aria-hidden="true">T</span>
+          <div>
+            <strong>Mustofa Ganteng</strong>
+            <a href="#">mustofagantenggacor@gmail.com</a>
+          </div>
+        </div>
+        <a class="dropdown-item" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.75h12a1 1 0 0 1 1 1V21l-7-4-7 4V4.75a1 1 0 0 1 1-1Z"></path></svg>
+          Konten yang disimpan
+        </a>
+        <a class="dropdown-item" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10v10H4V10h3Zm3 10h7.2a2 2 0 0 0 1.94-1.52l1.5-6A2 2 0 0 0 18.7 10H14l.7-3.1A2.4 2.4 0 0 0 12.35 4L8 10v10Z"></path></svg>
+          Konten yang disukai
+        </a>
+        <a class="dropdown-item" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path><circle cx="9" cy="6" r="2"></circle><circle cx="15" cy="12" r="2"></circle><circle cx="8" cy="18" r="2"></circle></svg>
+          Atur Minat
+        </a>
+        <a class="dropdown-item" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+          Atur mode
+        </a>
+        <a class="dropdown-item" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v12H9l-5 3v-15Z"></path><path d="m12 8 1.1 2.2 2.4.35-1.75 1.7.4 2.4L12 13.5l-2.15 1.15.4-2.4-1.75-1.7 2.4-.35L12 8Z"></path></svg>
+          Berikan Masukan
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg main-nav" aria-label="Navigasi utama">
+    <div class="container">
+      <button class="navbar-toggler py-1" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Buka navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown column-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Kolom
+            </button>
+            <ul class="dropdown-menu nav-column-menu profile-menu">
+              <li><a class="dropdown-item" href="#">Kolumnis</a></li>
+              <li><a class="dropdown-item" href="#">Indeks</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Nasional</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Regional</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Ekonomi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Tekno</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Lifestyle</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Olahraga</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Otomotif</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Food</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Video</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Cek Fakta</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container search-page py-4">
+    <div class="row g-4">
+      <section class="col-lg-8" aria-labelledby="search-results-heading">
+        <nav class="search-tabs" aria-label="Jenis hasil pencarian">
+          <a class="search-tab active" data-search-type="" href="search-page.html?q=Prabowo" aria-current="page">Semua</a>
+          <a class="search-tab" data-search-type="artikel" href="search-page.html?q=Prabowo&amp;type=artikel">Artikel</a>
+          <a class="search-tab" data-search-type="video" href="search-page.html?q=Prabowo&amp;type=video">Video</a>
+        </nav>
+
+        <h1 class="search-summary" id="search-results-heading">
+          <span class="search-count" aria-live="polite">Ditemukan 3 hasil untuk</span>
+          <strong class="search-query">“Prabowo”</strong>
+        </h1>
+
+        <div class="search-controls" aria-label="Urutkan hasil pencarian">
+          <button class="search-filter-button active" type="button" aria-pressed="true">Relevansi</button>
+          <button class="search-filter-button" type="button" aria-pressed="false">Terbaru</button>
+          <div class="search-filter-wrap">
+            <button class="search-filter-icon" type="button" aria-label="Buka filter pencarian" aria-expanded="false" aria-controls="search-filter-panel">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 7h16M7 12h10m-7 5h4" />
+                <circle cx="8" cy="7" r="2" />
+                <circle cx="15" cy="12" r="2" />
+                <circle cx="12" cy="17" r="2" />
+              </svg>
+            </button>
+            <section class="search-filter-panel" id="search-filter-panel" aria-labelledby="search-filter-heading" hidden>
+              <div class="search-filter-panel-heading">
+                <h2 id="search-filter-heading">Filter</h2>
+                <button class="search-filter-close" type="button" aria-label="Tutup filter">×</button>
+              </div>
+              <label class="search-filter-label" for="search-channel">Kanal</label>
+              <select class="form-select search-channel" id="search-channel">
+                <option value="">Semua kanal</option>
+                <option value="Nasional">Nasional</option>
+                <option value="Regional">Regional</option>
+                <option value="Ekonomi">Ekonomi</option>
+                <option value="Pendidikan">Pendidikan</option>
+                <option value="Kesehatan">Kesehatan</option>
+                <option value="Tekno">Tekno</option>
+              </select>
+
+              <fieldset class="search-date-filter">
+                <legend class="search-filter-label">Tanggal</legend>
+                <label><input type="radio" name="date-filter" value="any" checked> Semua tanggal</label>
+                <label><input type="radio" name="date-filter" value="today"> Hari ini</label>
+                <label><input type="radio" name="date-filter" value="yesterday"> Kemarin</label>
+                <label><input type="radio" name="date-filter" value="month"> Sebulan lalu</label>
+                <label><input type="radio" name="date-filter" value="custom"> Pilih tanggal</label>
+                <div class="search-date-range" hidden>
+                  <label for="search-date-value">Pilih tanggal</label>
+                  <input class="form-control" id="search-date-value" type="date">
+                </div>
+              </fieldset>
+              <button class="search-filter-apply" type="button">Terapkan</button>
+            </section>
+          </div>
+        </div>
+
+        <div class="search-results">
+          <article class="search-result">
+            <a class="search-result-image" href="isi-berita.html">
+              <img src="assets/img/foto2.webp" alt="Presiden Prabowo Subianto sedang berbicara" loading="lazy">
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Nasional</span>
+              <h2><a href="isi-berita.html">Prabowo: Mereka yang Serakah dan Bermental Mafia Pasti Akan Gagal</a></h2>
+              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 2 November 2026</p>
+              <p class="search-result-excerpt">Prabowo mengingatkan bahwa pihak yang tidak setia kepada Pancasila dan NKRI serta berniat merampok kekayaan negara akan menemui kegagalan.</p>
+            </div>
+          </article>
+
+          <article class="search-result">
+            <a class="search-result-image" href="#">
+              <img src="assets/img/foto6.webp" alt="Kapolri Jenderal Listyo Sigit Prabowo" loading="lazy">
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Nasional</span>
+              <h2><a href="#">Menelusuri Dalang Penyadapan Presiden Prabowo</a></h2>
+              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 2 November 2026</p>
+              <p class="search-result-excerpt">Simak laporan Timpa.com mengenai dugaan penyadapan terhadap Presiden Prabowo dan perkembangan penyelidikannya.</p>
+            </div>
+          </article>
+
+          <article class="search-result">
+            <a class="search-result-image" href="#">
+              <img src="assets/img/foto2.webp" alt="Presiden Prabowo Subianto dalam sebuah acara" loading="lazy">
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Nasional</span>
+              <h2><a href="#">Prabowo Resmikan SMA Taruna Nusantara Kampus Cimahi</a></h2>
+              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 30 Oktober 2026</p>
+              <p class="search-result-excerpt">Presiden Prabowo meresmikan kampus baru SMA Taruna Nusantara di Cimahi, Jawa Barat, sekaligus menyampaikan pesan tentang persatuan.</p>
+            </div>
+          </article>
+
+          <article class="search-result">
+            <a class="search-result-image" href="#">
+              <img src="assets/img/foto1.webp" alt="Presiden Prabowo Subianto menghadiri acara kenegaraan" loading="lazy">
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Nasional</span>
+              <h2><a href="#">Prabowo Tekankan Pentingnya Persatuan untuk Menjaga Keutuhan Bangsa</a></h2>
+              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 28 Oktober 2026</p>
+              <p class="search-result-excerpt">Presiden Prabowo mengajak seluruh elemen masyarakat menjaga persatuan dan mengutamakan kepentingan bangsa.</p>
+            </div>
+          </article>
+
+          <article class="search-result">
+            <a class="search-result-image" href="#">
+              <img src="assets/img/foto3.webp" alt="Kegiatan pendidikan di sekolah" loading="lazy">
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Pendidikan</span>
+              <h2><a href="#">Prabowo Dorong Pemerataan Akses Pendidikan di Berbagai Daerah</a></h2>
+              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 25 Oktober 2026</p>
+              <p class="search-result-excerpt">Pemerintah menyoroti pemerataan sarana pendidikan sebagai salah satu langkah memperkuat kualitas sumber daya manusia.</p>
+            </div>
+          </article>
+
+          <article class="search-result">
+            <a class="search-result-image" href="#">
+              <img src="assets/img/foto5.webp" alt="Perempuan menyampaikan keterangan kepada media" loading="lazy">
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Nasional</span>
+              <h2><a href="#">Prabowo Minta Jajaran Pemerintah Responsif terhadap Aspirasi Masyarakat</a></h2>
+              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 22 Oktober 2026</p>
+              <p class="search-result-excerpt">Presiden meminta jajaran pemerintah mendengar masukan publik dan menindaklanjutinya dengan kebijakan yang tepat.</p>
+            </div>
+          </article>
+
+          <article class="search-result">
+            <a class="search-result-image" href="#">
+              <img src="assets/img/foto7.webp" alt="Pelaku usaha mempromosikan produk secara daring" loading="lazy">
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Ekonomi</span>
+              <h2><a href="#">Prabowo Bahas Penguatan UMKM dan Penciptaan Lapangan Kerja</a></h2>
+              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 20 Oktober 2026</p>
+              <p class="search-result-excerpt">Penguatan usaha kecil dan penciptaan lapangan kerja menjadi bagian dari agenda pemerintah untuk mendorong ekonomi nasional.</p>
+            </div>
+          </article>
+
+          <article class="search-result">
+            <a class="search-result-image" href="#">
+              <img src="assets/img/foto8.webp" alt="Beragam obat tersusun di atas meja" loading="lazy">
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Kesehatan</span>
+              <h2><a href="#">Prabowo Soroti Penguatan Layanan Kesehatan bagi Masyarakat</a></h2>
+              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 18 Oktober 2026</p>
+              <p class="search-result-excerpt">Peningkatan akses dan mutu layanan kesehatan menjadi salah satu perhatian dalam agenda pembangunan nasional.</p>
+            </div>
+          </article>
+
+          <article class="search-result">
+            <a class="search-result-image" href="#">
+              <img src="assets/img/foto9.webp" alt="Ilustrasi perlindungan dan keselamatan masyarakat" loading="lazy">
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Nasional</span>
+              <h2><a href="#">Prabowo Ajak Masyarakat Waspada terhadap Provokasi yang Memecah Belah</a></h2>
+              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 15 Oktober 2026</p>
+              <p class="search-result-excerpt">Presiden mengingatkan pentingnya menjaga kerukunan dan tidak mudah terpengaruh informasi yang memicu perpecahan.</p>
+            </div>
+          </article>
+
+          <article class="search-result">
+            <a class="search-result-image" href="#">
+              <img src="assets/img/foto10.webp" alt="Suasana aktivitas perdagangan di Makassar" loading="lazy">
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Regional</span>
+              <h2><a href="#">Prabowo Minta Program Pemerintah Berdampak hingga ke Daerah</a></h2>
+              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 12 Oktober 2026</p>
+              <p class="search-result-excerpt">Pemerintah didorong memastikan manfaat program pembangunan dapat dirasakan masyarakat di seluruh wilayah.</p>
+            </div>
+          </article>
+
+          <article class="search-result">
+            <a class="search-result-image" href="#">
+              <img src="assets/img/foto4.webp" alt="Personel kepolisian dalam kegiatan pengamanan" loading="lazy">
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Nasional</span>
+              <h2><a href="#">Prabowo Ingatkan Pentingnya Kewaspadaan dan Stabilitas Nasional</a></h2>
+              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 9 Oktober 2026</p>
+              <p class="search-result-excerpt">Presiden menekankan kewaspadaan bersama untuk menjaga keamanan, stabilitas, dan persatuan nasional.</p>
+            </div>
+          </article>
+
+          <article class="search-result">
+            <a class="search-result-image" href="#">
+              <img src="assets/img/foto6.webp" alt="Suasana ruang pemantauan teknologi" loading="lazy">
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Tekno</span>
+              <h2><a href="#">Prabowo Dorong Pemanfaatan Teknologi untuk Meningkatkan Pelayanan Publik</a></h2>
+              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 7 Oktober 2026</p>
+              <p class="search-result-excerpt">Pemanfaatan teknologi dinilai dapat membantu pemerintah menghadirkan layanan publik yang lebih mudah dijangkau.</p>
+            </div>
+          </article>
+
+          <article class="search-result">
+            <a class="search-result-image" href="#">
+              <img src="assets/img/foto1.webp" alt="Presiden Prabowo bersama tokoh masyarakat" loading="lazy">
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Nasional</span>
+              <h2><a href="#">Prabowo Menjaga Jarak Aman dengan Jokowi</a></h2>
+              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 6 Oktober 2026</p>
+              <p class="search-result-excerpt">Prabowo tidak sedang meninggalkan Jokowi. Ia sedang mengatur jaraknya. Politik jarak aman sedang bekerja di Istana.</p>
+            </div>
+          </article>
+        </div>
+        <p class="search-empty" hidden>Tidak ada berita yang cocok dengan pencarian ini.</p>
+        <nav class="search-pagination" aria-label="Navigasi halaman hasil pencarian"></nav>
+      </section>
+
+      <aside class="col-lg-4 search-sidebar" aria-labelledby="search-picks-heading">
+        <section>
+          <div class="section-heading">
+            <h2 id="search-picks-heading">Pilihan Timpa</h2>
+          </div>
+          <div class="search-picks">
+            <article class="side-story">
+              <img src="assets/img/foto7.webp" alt="Pelaku usaha berjualan melalui siaran langsung" loading="lazy">
+              <div>
+                <span class="category-label">Ekonomi</span>
+                <h3><a href="#">Rupiah Tembus 18.000, UMKM Diminta Rela Untung Tipis Ketimbang Gulung Tikar</a></h3>
+                <div class="story-meta">1 jam lalu</div>
+              </div>
+            </article>
+            <article class="side-story">
+              <img src="assets/img/foto4.webp" alt="Barisan polisi dengan perlengkapan pengamanan" loading="lazy">
+              <div>
+                <span class="category-label">Nasional</span>
+                <h3><a href="#">Kronologi 7 Polisi Surabaya Dimutasi Usai Ungkap Kasus Narkoba 3 Anggota DPRD</a></h3>
+                <div class="story-meta">4 jam lalu</div>
+              </div>
+            </article>
+            <article class="side-story">
+              <img src="assets/img/foto10.webp" alt="Suasana pusat perbelanjaan Pasar Butung Makassar" loading="lazy">
+              <div>
+                <span class="category-label">Regional</span>
+                <h3><a href="#">Warga Pasar Butung Makassar Keluhkan Pemadaman Listrik Bergilir</a></h3>
+                <div class="story-meta">5 jam lalu</div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="app-promo instagram-promo mt-4" aria-labelledby="instagram-promo-heading">
+          <h2 id="instagram-promo-heading">Ikuti Instagram @raditt.png</h2>
+          <p>Pindai kode QR untuk mengunjungi profil Instagram.</p>
+          <a class="instagram-qr" href="https://www.instagram.com/raditt.png/" target="_blank" rel="noopener noreferrer" aria-label="Buka profil Instagram raditt.png">
+            <img src="instagram-qr.svg" alt="Kode QR menuju profil Instagram raditt.png">
+          </a>
+          <p class="app-promo-note">Arahkan kamera ponsel ke kode QR.</p>
+          <div class="app-store-badges" aria-label="Badge toko aplikasi, belum aktif">
+            <span class="app-store-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.8c0-2 1.6-3 1.7-3.1a3.7 3.7 0 0 0-2.9-1.6c-1.2-.1-2.4.7-3 .7s-1.5-.7-2.5-.7a3.8 3.8 0 0 0-3.2 1.9c-1.4 2.4-.4 6 1 8 .7 1 1.4 2 2.4 2s1.3-.6 2.5-.6 1.6.6 2.5.6 1.6-.9 2.2-1.9c.7-1 1-2 1-2.1-.1 0-1.7-.7-1.7-3.2ZM14.4 6.8a3.6 3.6 0 0 0 .8-2.5 3.7 3.7 0 0 0-2.4 1.2 3.4 3.4 0 0 0-.8 2.4 3 3 0 0 0 2.4-1.1Z" /></svg>
+              <span><small>Download di</small><strong>App Store</strong></span>
+            </span>
+            <span class="app-store-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34a853" d="M3 2.7v18.6L13.2 12 3 2.7Z" /><path fill="#4285f4" d="m3 21.3 12.5-7.2-2.3-2.1L3 21.3Z" /><path fill="#fbbc04" d="m15.5 9.9-2.3 2.1 2.3 2.1 4.1-2.4c.8-.5.8-1.2 0-1.7l-4.1-2.4Z" /><path fill="#ea4335" d="M3 2.7 13.2 12l2.3-2.1L3 2.7Z" /></svg>
+              <span><small>Temukan di</small><strong>Google Play</strong></span>
+            </span>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  
+<footer class="site-footer">
+    <div class="container">
+      <div class="site-footer-main">
+        <a class="site-footer-brand" href="#" aria-label="Timpa.com beranda">Timpa<span>.com</span></a>
+        <p>Tajam · Terpercaya · Terdepan</p>
+        <nav class="site-footer-nav" aria-label="Navigasi footer">
+          <a href="#">Tentang Kami</a>
+          <a href="#">Nasional</a>
+          <a href="#">Regional</a>
+          <a href="#">Ekonomi</a>
+          <a href="#">Tekno</a>
+          <a href="#">Lifestyle</a>
+          <a href="#">Olahraga</a>
+          <a href="#">Otomotif</a>
+          <a href="#">Food</a>
+          <a href="#">Video</a>
+        </nav>
+      </div>
+      <div class="site-footer-bottom">
+        <span>© 2026 Timpa.com. Mantap Gacor Wadidaw Acikiwir.</span>
+        <span>Berita hari ini, untuk semua.</span>
+      </div>
+    </div>
+  </footer>
+ 
+  <script>
+    const searchParams = new URLSearchParams(window.location.search);
+    const searchInput = document.getElementById("site-search");
+    const query = searchParams.get("q") || "Prabowo";
+    const normalizedQuery = query.trim().toLocaleLowerCase("id");
+    const resultCards = [...document.querySelectorAll(".search-result")];
+    const pageSize = 5;
+    const pagination = document.querySelector(".search-pagination");
+    const filterButton = document.querySelector(".search-filter-icon");
+    const filterPanel = document.querySelector(".search-filter-panel");
+    const channelSelect = document.getElementById("search-channel");
+    const dateRange = document.querySelector(".search-date-range");
+    const selectedDateInput = document.getElementById("search-date-value");
+    const monthNames = {
+      januari: 0, februari: 1, maret: 2, april: 3, mei: 4, juni: 5,
+      juli: 6, agustus: 7, september: 8, oktober: 9, november: 10, desember: 11
+    };
+
+    searchInput.value = query;
+    document.querySelector(".search-query").textContent = `“${query}”`;
+    channelSelect.value = searchParams.get("channel") || "";
+    const activeDateFilter = searchParams.get("date") || "any";
+    const activeDateRadio = document.querySelector(
+      `input[name="date-filter"][value="${activeDateFilter}"]`
+    );
+    (activeDateRadio || document.querySelector('input[name="date-filter"][value="any"]')).checked = true;
+    selectedDateInput.value = searchParams.get("selectedDate") || searchParams.get("from") || "";
+    dateRange.hidden = activeDateFilter !== "custom";
+    selectedDateInput.required = activeDateFilter === "custom";
+
+    const parseResultDate = (result) => {
+      const meta = result.querySelector(".search-result-meta").textContent;
+      const match = meta.match(/(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/);
+      if (!match) return null;
+      const month = monthNames[match[2].toLocaleLowerCase("id")];
+      return month === undefined ? null : new Date(Number(match[3]), month, Number(match[1]));
+    };
+
+    const startOfDay = (date) => new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    const getFilteredResults = () => {
+      const selectedChannel = channelSelect.value;
+      const selectedDateFilter = document.querySelector('input[name="date-filter"]:checked').value;
+      const today = startOfDay(new Date());
+      const yesterday = new Date(today);
+      yesterday.setDate(yesterday.getDate() - 1);
+      const monthAgo = new Date(today);
+      monthAgo.setDate(monthAgo.getDate() - 30);
+      const selectedDate = selectedDateInput.value
+        ? startOfDay(new Date(`${selectedDateInput.value}T00:00:00`))
+        : null;
+
+      return resultCards.filter((result) => {
+        if (!result.textContent.toLocaleLowerCase("id").includes(normalizedQuery)) return false;
+        const category = result.querySelector(".category-label").textContent.trim();
+        if (selectedChannel && category !== selectedChannel) return false;
+
+        const resultDate = parseResultDate(result);
+        if (!resultDate) return selectedDateFilter === "any";
+        const date = startOfDay(resultDate);
+        if (selectedDateFilter === "today") return date.getTime() === today.getTime();
+        if (selectedDateFilter === "yesterday") return date.getTime() === yesterday.getTime();
+        if (selectedDateFilter === "month") return date >= monthAgo && date <= today;
+        if (selectedDateFilter === "custom") return selectedDate && date.getTime() === selectedDate.getTime();
+        return true;
+      });
+    };
+
+    const createPageLink = (label, page, accessibleLabel, active = false) => {
+      const link = document.createElement("a");
+      const pageParams = new URLSearchParams(window.location.search);
+      pageParams.set("q", query);
+      pageParams.set("page", String(page));
+      link.className = `search-page-link${active ? " active" : ""}`;
+      link.href = `search-page.html?${pageParams.toString()}`;
+      link.textContent = label;
+      link.setAttribute("aria-label", accessibleLabel);
+      if (active) link.setAttribute("aria-current", "page");
+      return link;
+    };
+
+    const renderResults = () => {
+      const filteredResults = getFilteredResults();
+      const pageCount = Math.ceil(filteredResults.length / pageSize);
+      const requestedPage = Number.parseInt(searchParams.get("page") || "1", 10);
+      const currentPage = Number.isFinite(requestedPage)
+        ? Math.min(Math.max(requestedPage, 1), Math.max(pageCount, 1))
+        : 1;
+      const visibleResults = filteredResults.slice(
+        (currentPage - 1) * pageSize,
+        currentPage * pageSize
+      );
+
+      document.querySelector(".search-count").textContent =
+        `Ditemukan ${filteredResults.length} hasil untuk`;
+      resultCards.forEach((result) => {
+        result.hidden = !visibleResults.includes(result);
+      });
+      document.querySelector(".search-empty").hidden = filteredResults.length > 0;
+      pagination.replaceChildren();
+
+      if (pageCount > 1) {
+        if (currentPage > 1) {
+          pagination.append(createPageLink("‹", currentPage - 1, "Halaman sebelumnya"));
+        }
+
+        for (let page = 1; page <= pageCount; page += 1) {
+          pagination.append(
+            createPageLink(String(page), page, `Halaman ${page}`, page === currentPage)
+          );
+        }
+
+        if (currentPage < pageCount) {
+          pagination.append(createPageLink("›", currentPage + 1, "Halaman berikutnya"));
+          pagination.append(createPageLink("»", pageCount, "Halaman terakhir"));
+        }
+      }
+    };
+
+    const syncFilterParams = () => {
+      const params = new URLSearchParams(window.location.search);
+      params.set("q", query);
+      params.set("page", "1");
+      if (channelSelect.value) params.set("channel", channelSelect.value);
+      else params.delete("channel");
+
+      const selectedDateFilter = document.querySelector('input[name="date-filter"]:checked').value;
+      if (selectedDateFilter === "any") params.delete("date");
+      else params.set("date", selectedDateFilter);
+      if (selectedDateFilter === "custom" && selectedDateInput.value) {
+        params.set("selectedDate", selectedDateInput.value);
+      } else {
+        params.delete("selectedDate");
+      }
+      params.delete("from");
+      params.delete("to");
+
+      window.history.replaceState(null, "", `${window.location.pathname}?${params.toString()}`);
+      searchParams.set("page", "1");
+    };
+
+    const closeFilterPanel = () => {
+      filterPanel.hidden = true;
+      filterButton.setAttribute("aria-expanded", "false");
+    };
+
+    filterButton.addEventListener("click", () => {
+      filterPanel.hidden = !filterPanel.hidden;
+      filterButton.setAttribute("aria-expanded", String(!filterPanel.hidden));
+    });
+    document.querySelector(".search-filter-close").addEventListener("click", closeFilterPanel);
+    document.querySelectorAll('input[name="date-filter"]').forEach((radio) => {
+      radio.addEventListener("change", () => {
+        const custom = radio.value === "custom" && radio.checked;
+        dateRange.hidden = !custom;
+        selectedDateInput.required = custom;
+      });
+    });
+    document.querySelector(".search-filter-apply").addEventListener("click", () => {
+      if (!selectedDateInput.reportValidity()) return;
+      syncFilterParams();
+      renderResults();
+      closeFilterPanel();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeFilterPanel();
+    });
+    document.addEventListener("click", (event) => {
+      if (!filterPanel.hidden && !event.target.closest(".search-filter-wrap")) {
+        closeFilterPanel();
+      }
+    });
+    renderResults();
+
+    document.querySelectorAll("[data-search-type]").forEach((tab) => {
+      const tabParams = new URLSearchParams(window.location.search);
+      tabParams.set("q", query);
+      tabParams.delete("page");
+      const type = tab.dataset.searchType;
+      if (type) tabParams.set("type", type);
+      else tabParams.delete("type");
+      tab.href = `search-page.html?${tabParams.toString()}`;
+    });
+  </script>
+</body> 
+<script 
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.m
+in.js" integrity="sha384
+YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+crossorigin="anonymous"></script> 
+</html>
