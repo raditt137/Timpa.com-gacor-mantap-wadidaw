@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="hoaks.css">
 </head> 
 <body> 
 <div class="utility-bar">
@@ -82,7 +82,7 @@
       </button>
       <div class="collapse navbar-collapse" id="mainMenu">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item dropdown column-dropdown">
             <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               Kolom
@@ -101,13 +101,329 @@
           <li class="nav-item"><a class="nav-link" href="#">Otomotif</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Food</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Video</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Cek Fakta</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="hoaks.html">Cek Fakta</a></li>
         </ul>
       </div>
     </div>
   </nav>
- 
 
+  <main class="container halaman-cek-fakta py-4">
+    <section class="banner-cek-fakta mb-5 text-white" aria-labelledby="judul-banner-cek-fakta">
+      <div class="ilustrasi-banner-cek-fakta" aria-hidden="true">
+        <div class="jendela-ilustrasi-berita"><span></span><span></span><span></span><i></i><b></b></div>
+        <div class="orang-ilustrasi-cek-fakta"></div>
+        <div class="tanda-verifikasi-ilustrasi">✓</div>
+      </div>
+      <div class="teks-banner-cek-fakta">
+        <p class="label-banner-cek-fakta">TIMPA.COM · CEK FAKTA</p>
+        <h1 id="judul-banner-cek-fakta"><span class="text-danger">HOAKS</span> ATAU<br><span class="text-white">FAKTA?</span></h1>
+        <p class="mb-3">Jangan langsung percaya atau membagikan informasi. Baca hasil pemeriksaan dan klarifikasi dari sumber tepercaya.</p>
+        <div class="aksi-banner-cek-fakta d-flex flex-wrap gap-2">
+          <a class="btn tombol-utama-cek-fakta" href="#cek-fakta-terbaru">Lihat cek fakta</a>
+          <a class="btn tombol-panduan-cek-fakta" href="#panduan-cek-fakta">Panduan cek fakta</a>
+        </div>
+      </div>
+      <div class="panel-samping-cek-fakta">
+        <strong>Periksa sebelum<br>membagikan</strong>
+        <span>Menemukan berita viral yang meragukan atau ingin memastikan faktanya? Laporkan kepada kami melalui tombol di bawah.</span>
+        <a class="tombol-laporkan-hoaks" href="lapor-hoaks.html">Laporkan Hoaks</a>
+      </div>
+    </section>
+
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <section class="mb-5" id="cek-fakta-terbaru" aria-labelledby="judul-cek-fakta-terbaru">
+          <div class="judul-bagian-cek-fakta d-flex align-items-center justify-content-between gap-3 mb-3 pb-2 border-bottom">
+            <h2 class="text-dark fs-6 fw-bold m-0 ps-2" id="judul-cek-fakta-terbaru">CEK FAKTA TERBARU</h2>
+            <a class="flex-shrink-0" href="#">Cek berita lainnya <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="row g-3">
+            <div class="col-md-6 col-xl-4">
+              <article class="kartu-berita-cek-fakta h-100">
+                <a class="gambar-kartu-berita d-block overflow-hidden position-relative" href="isi-berita.html">
+                  <img class="d-block w-100" src="assets/img/foto1.webp" alt="Warga mengenakan masker di tengah kabut asap" loading="lazy">
+                  <span class="status-berita-cek-fakta text-white position-absolute bottom-0 start-0 bg-success">FAKTA</span>
+                </a>
+                <div class="teks-kartu-berita pt-2">
+                  <span class="category-label">Lingkungan</span>
+                  <h3><a href="isi-berita.html">Menelusuri informasi seputar karhutla dan kabut asap</a></h3>
+                  <p class="story-meta">Timpa News <span aria-hidden="true">·</span> 05/11/2026, 10:01 WIB</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <article class="kartu-berita-cek-fakta h-100">
+                <a class="gambar-kartu-berita d-block overflow-hidden position-relative" href="isi-berita.html">
+                  <img class="d-block w-100" src="assets/img/foto3.webp" alt="Kotak makanan untuk program Makan Bergizi Gratis" loading="lazy">
+                  <span class="status-berita-cek-fakta text-white position-absolute bottom-0 start-0 bg-primary">KLARIFIKASI</span>
+                </a>
+                <div class="teks-kartu-berita pt-2">
+                  <span class="category-label">Nasional</span>
+                  <h3><a href="isi-berita.html">Dugaan keracunan menu MBG di Banda Aceh: ini informasi resminya</a></h3>
+                  <p class="story-meta">Timpa News <span aria-hidden="true">·</span> 05/11/2026, 08:48 WIB</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <article class="kartu-berita-cek-fakta h-100">
+                <a class="gambar-kartu-berita d-block overflow-hidden position-relative" href="isi-berita.html">
+                  <img class="d-block w-100" src="assets/img/foto7.webp" alt="Ilustrasi informasi yang beredar di media sosial" loading="lazy">
+                  <span class="status-berita-cek-fakta text-white position-absolute bottom-0 start-0 bg-danger">HOAKS</span>
+                </a>
+                <div class="teks-kartu-berita pt-2">
+                  <span class="category-label">Nasional</span>
+                  <h3><a href="isi-berita.html">Hoaks: Waspadai klaim bantuan gratis dari tautan tak dikenal</a></h3>
+                  <p class="story-meta">Timpa News <span aria-hidden="true">·</span> 04/11/2026, 20:15 WIB</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <article class="kartu-berita-cek-fakta h-100">
+                <a class="gambar-kartu-berita d-block overflow-hidden position-relative" href="isi-berita.html">
+                  <img class="d-block w-100" src="assets/img/foto2.webp" alt="Presiden Prabowo Subianto sedang berbicara" loading="lazy">
+                  <span class="status-berita-cek-fakta text-white position-absolute bottom-0 start-0 bg-danger">HOAKS</span>
+                </a>
+                <div class="teks-kartu-berita pt-2">
+                  <span class="category-label">Nasional</span>
+                  <h3><a href="isi-berita.html">Hoaks: Video pidato Prabowo dipotong dan disebarkan tanpa konteks</a></h3>
+                  <p class="story-meta">Timpa News <span aria-hidden="true">·</span> 04/11/2026, 14:33 WIB</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <article class="kartu-berita-cek-fakta h-100">
+                <a class="gambar-kartu-berita d-block overflow-hidden position-relative" href="isi-berita.html">
+                  <img class="d-block w-100" src="assets/img/foto8.webp" alt="Ilustrasi berbagai jenis antibiotik" loading="lazy">
+                  <span class="status-berita-cek-fakta text-white position-absolute bottom-0 start-0 bg-success">FAKTA</span>
+                </a>
+                <div class="teks-kartu-berita pt-2">
+                  <span class="category-label">Kesehatan</span>
+                  <h3><a href="isi-berita.html">BPOM sebut 80 persen antibiotik digunakan tanpa resep dokter</a></h3>
+                  <p class="story-meta">Timpa News <span aria-hidden="true">·</span> 03/11/2026, 13:26 WIB</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <article class="kartu-berita-cek-fakta h-100">
+                <a class="gambar-kartu-berita d-block overflow-hidden position-relative" href="isi-berita.html">
+                  <img class="d-block w-100" src="assets/img/foto4.webp" alt="Petugas kepolisian dalam pengamanan" loading="lazy">
+                  <span class="status-berita-cek-fakta text-white position-absolute bottom-0 start-0 bg-primary">KLARIFIKASI</span>
+                </a>
+                <div class="teks-kartu-berita pt-2">
+                  <span class="category-label">Nasional</span>
+                  <h3><a href="isi-berita.html">Klarifikasi: Video lama beredar kembali dengan konteks berbeda</a></h3>
+                  <p class="story-meta">Timpa News <span aria-hidden="true">·</span> 02/11/2026, 09:18 WIB</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="bagian-topik-cek-fakta mb-5" aria-labelledby="data-fakta-heading">
+          <div class="section-heading">
+            <h2 id="data-fakta-heading">DATA FAKTUAL</h2>
+            <a href="#">Lihat selengkapnya <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <article class="kartu-berita-cek-fakta h-100">
+                <a class="gambar-kartu-berita d-block overflow-hidden position-relative" href="isi-berita.html">
+                  <img class="d-block w-100" src="assets/img/foto3.webp" alt="Ilustrasi persediaan makanan untuk kebutuhan darurat" loading="lazy">
+                  <span class="status-berita-cek-fakta text-white position-absolute bottom-0 start-0 bg-success">FAKTA</span>
+                </a>
+                <div class="teks-kartu-berita pt-2">
+                  <span class="category-label">Internasional</span>
+                  <h3><a href="isi-berita.html">34 Negara Imbau Warganya Siapkan Perbekalan Darurat, Ini Daftarnya</a></h3>
+                  <p class="story-meta">Timpa News <span aria-hidden="true">·</span> 05/11/2026, 10:01 WIB</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="kartu-berita-cek-fakta h-100">
+                <a class="gambar-kartu-berita d-block overflow-hidden position-relative" href="isi-berita.html">
+                  <img class="d-block w-100" src="assets/img/foto1.webp" alt="Kabut asap di kawasan terdampak kebakaran hutan" loading="lazy">
+                  <span class="status-berita-cek-fakta text-white position-absolute bottom-0 start-0 bg-success">FAKTA</span>
+                </a>
+                <div class="teks-kartu-berita pt-2">
+                  <span class="category-label">Lingkungan</span>
+                  <h3><a href="isi-berita.html">CEK FAKTA: Benarkah Angka Kematian akibat Karhutla di Indonesia Capai?</a></h3>
+                  <p class="story-meta">Timpa News <span aria-hidden="true">·</span> 04/11/2026, 14:33 WIB</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="kartu-berita-cek-fakta h-100">
+                <a class="gambar-kartu-berita d-block overflow-hidden position-relative" href="isi-berita.html">
+                  <img class="d-block w-100" src="assets/img/foto5.webp" alt="Ilustrasi perbandingan kebijakan pajak" loading="lazy">
+                  <span class="status-berita-cek-fakta text-white position-absolute bottom-0 start-0 bg-success">FAKTA</span>
+                </a>
+                <div class="teks-kartu-berita pt-2">
+                  <span class="category-label">Ekonomi</span>
+                  <h3><a href="isi-berita.html">Perbandingan Pajak Pembalut di ASEAN, Indonesia Tertinggi Nomor 2</a></h3>
+                  <p class="story-meta">Timpa News <span aria-hidden="true">·</span> 03/11/2026, 13:26 WIB</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="bagian-topik-cek-fakta mb-5" aria-labelledby="sejarah-fakta-heading">
+          <div class="section-heading">
+            <h2 id="sejarah-fakta-heading">FAKTA SEJARAH</h2>
+            <a href="#">Lihat selengkapnya <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <article class="kartu-berita-cek-fakta h-100">
+                <a class="gambar-kartu-berita d-block overflow-hidden position-relative" href="isi-berita.html">
+                  <img class="d-block w-100" src="assets/img/foto7.webp" alt="Ilustrasi peristiwa pada malam Halloween" loading="lazy">
+                  <span class="status-berita-cek-fakta text-white position-absolute bottom-0 start-0 bg-success">FAKTA</span>
+                </a>
+                <div class="teks-kartu-berita pt-2">
+                  <span class="category-label">Sejarah</span>
+                  <h3><a href="isi-berita.html">Tragedi Malam Halloween 1974, Anak Hilang Nyawa karena Diracun Ayahnya</a></h3>
+                  <p class="story-meta">Timpa News <span aria-hidden="true">·</span> 31/10/2026, 13:18 WIB</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="kartu-berita-cek-fakta h-100">
+                <a class="gambar-kartu-berita d-block overflow-hidden position-relative" href="isi-berita.html">
+                  <img class="d-block w-100" src="assets/img/foto5.webp" alt="Potret seorang penulis Indonesia" loading="lazy">
+                  <span class="status-berita-cek-fakta text-white position-absolute bottom-0 start-0 bg-success">FAKTA</span>
+                </a>
+                <div class="teks-kartu-berita pt-2">
+                  <span class="category-label">Tokoh</span>
+                  <h3><a href="isi-berita.html">Di Balik Laut Bercerita, Ketidaksanggupan Leila Chudori Menulis Ibu</a></h3>
+                  <p class="story-meta">Timpa News <span aria-hidden="true">·</span> 29/10/2026, 11:11 WIB</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="kartu-berita-cek-fakta h-100">
+                <a class="gambar-kartu-berita d-block overflow-hidden position-relative" href="isi-berita.html">
+                  <img class="d-block w-100" src="assets/img/foto4.webp" alt="Ilustrasi tokoh dan peristiwa bersejarah Indonesia" loading="lazy">
+                  <span class="status-berita-cek-fakta text-white position-absolute bottom-0 start-0 bg-success">FAKTA</span>
+                </a>
+                <div class="teks-kartu-berita pt-2">
+                  <span class="category-label">Sejarah</span>
+                  <h3><a href="isi-berita.html">Berapa Usia Para Tokoh Sumpah Pemuda Saat Kongres Pemuda II?</a></h3>
+                  <p class="story-meta">Timpa News <span aria-hidden="true">·</span> 28/10/2026, 18:55 WIB</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="panduan-cek-fakta mb-4" id="panduan-cek-fakta" aria-labelledby="judul-panduan-cek-fakta">
+          <div class="judul-bagian-cek-fakta d-flex align-items-center justify-content-between gap-3 mb-3 pb-2 border-bottom">
+            <h2 class="text-dark fs-6 fw-bold m-0 ps-2" id="judul-panduan-cek-fakta">CARA SEDERHANA CEK FAKTA</h2>
+          </div>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <article class="langkah-panduan-cek-fakta bg-white border rounded h-100 p-3">
+                <span class="fs-4 fw-bold">01</span>
+                <h3 class="fw-bold">Periksa sumbernya</h3>
+                <p class="m-0">Pastikan informasi berasal dari media atau lembaga yang jelas dan tepercaya.</p>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="langkah-panduan-cek-fakta bg-white border rounded h-100 p-3">
+                <span class="fs-4 fw-bold">02</span>
+                <h3 class="fw-bold">Cari konteks lengkap</h3>
+                <p class="m-0">Baca isi berita, bukan hanya judul, potongan gambar, atau pesan berantai.</p>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="langkah-panduan-cek-fakta bg-white border rounded h-100 p-3">
+                <span class="fs-4 fw-bold">03</span>
+                <h3 class="fw-bold">Cek tanggal dan bukti</h3>
+                <p class="m-0">Bandingkan dengan sumber lain dan pastikan informasi masih relevan.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="col-lg-4 kolom-samping-cek-fakta" aria-label="Iklan dan Instagram Timpa.com">
+        <a class="shopee-ad mb-4" href="https://shopee.co.id/" target="_blank" rel="noopener noreferrer" aria-label="Kunjungi Shopee">
+          <span class="shopee-ad-label">IKLAN</span>
+          <span class="shopee-ad-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M10 17h28l2 25H8l2-25Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"></path>
+              <path d="M17 18v-5a7 7 0 0 1 14 0v5" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+              <path d="M19 29c1.2-2 8.8-2 10 0 2 3-2.5 4-5 5s-4 2-4 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"></path>
+              <circle cx="24" cy="39" r="1.5" fill="currentColor"></circle>
+            </svg>
+          </span>
+          <span class="shopee-ad-copy">
+            <strong>Belanja mudah di Shopee</strong>
+            <span>Temukan berbagai kebutuhanmu di satu tempat.</span>
+          </span>
+          <span class="shopee-ad-cta">Kunjungi Shopee <span aria-hidden="true">→</span></span>
+        </a>
+        <section class="app-promo instagram-promo mt-4" aria-labelledby="instagram-promo-heading">
+          <h2 id="instagram-promo-heading">Ikuti Instagram @raditt.png</h2>
+          <p>Pindai kode QR untuk mengunjungi profil Instagram.</p>
+          <a class="instagram-qr" href="https://www.instagram.com/raditt.png/" target="_blank" rel="noopener noreferrer" aria-label="Buka profil Instagram raditt.png">
+            <img src="instagram-qr.svg" alt="Kode QR menuju profil Instagram raditt.png">
+          </a>
+          <p class="app-promo-note">Arahkan kamera ponsel ke kode QR.</p>
+          <div class="app-store-badges" aria-label="Badge toko aplikasi, belum aktif">
+            <span class="app-store-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.8c0-2 1.6-3 1.7-3.1a3.7 3.7 0 0 0-2.9-1.6c-1.2-.1-2.4.7-3 .7s-1.5-.7-2.5-.7a3.8 3.8 0 0 0-3.2 1.9c-1.4 2.4-.4 6 1 8 .7 1 1.4 2 2.4 2s1.3-.6 2.5-.6 1.6.6 2.5.6 1.6-.9 2.2-1.9c.7-1 1-2 1-2.1-.1 0-1.7-.7-1.7-3.2ZM14.4 6.8a3.6 3.6 0 0 0 .8-2.5 3.7 3.7 0 0 0-2.4 1.2 3.4 3.4 0 0 0-.8 2.4 3 3 0 0 0 2.4-1.1Z" /></svg>
+              <span><small>Download di</small><strong>App Store</strong></span>
+            </span>
+            <span class="app-store-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34a853" d="M3 2.7v18.6L13.2 12 3 2.7Z" /><path fill="#4285f4" d="m3 21.3 12.5-7.2-2.3-2.1L3 21.3Z" /><path fill="#fbbc04" d="m15.5 9.9-2.3 2.1 2.3 2.1 4.1-2.4c.8-.5.8-1.2 0-1.7l-4.1-2.4Z" /><path fill="#ea4335" d="M3 2.7 13.2 12l2.3-2.1L3 2.7Z" /></svg>
+              <span><small>Temukan di</small><strong>Google Play</strong></span>
+            </span>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer-main">
+        <a class="site-footer-brand" href="#" aria-label="Timpa.com beranda">Timpa<span>.com</span></a>
+        <p>Tajam · Terpercaya · Terdepan</p>
+        <nav class="site-footer-nav" aria-label="Navigasi footer">
+          <a href="#">Tentang Kami</a>
+          <a href="#">Kolumnis</a>
+          <a href="#">Indeks</a>
+          <a href="#">Nasional</a>
+          <a href="#">Regional</a>
+          <a href="#">Ekonomi</a>
+          <a href="#">Tekno</a>
+          <a href="#">Lifestyle</a>
+          <a href="#">Olahraga</a>
+          <a href="#">Otomotif</a>
+          <a href="#">Food</a>
+          <a href="#">Video</a>
+          <a href="hoaks.html">Cek Fakta</a>
+        </nav>
+      </div>
+      <div class="site-footer-bottom">
+        <span>© 2026 Timpa.com. Mantap Gacor Wadidaw Acikiwir.</span>
+        <span>Berita hari ini, untuk semua.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    if (!window.bootstrap) {
+      const navToggle = document.querySelector(".navbar-toggler");
+      const navMenu = document.getElementById("mainMenu");
+
+      navToggle.addEventListener("click", () => {
+        const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+        navToggle.setAttribute("aria-expanded", String(!isExpanded));
+        navMenu.classList.toggle("show", !isExpanded);
+      });
+    }
+  </script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
 </html>
