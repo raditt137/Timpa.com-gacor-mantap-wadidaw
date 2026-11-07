@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Timpa.com</title>
+
+  <!-- CSS Bootstrap 5.3.3 dari CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="kolumnis.css">
+</head>
+
+<body>
+  <div class="utility-bar">
+    <div class="container d-flex justify-content-between py-2">
+      <span>Senin, 2 November 2026</span>
+      <span class="d-none d-sm-inline">Berita hari ini, untuk semua</span>
+    </div>
+  </div>
+
+  <header class="container brand-row d-flex align-items-center justify-content-between">
+    <a class="d-inline-flex flex-column" href="#" aria-label="Timpa.com beranda">
+      <span class="brand-mark">Timpa<span>.com</span></span>
+      <span class="brand-tagline">Tajam · Terpercaya · Terdepan</span>
+    </a>
+    <form class="d-flex align-items-center flex-grow-1 ms-4 border-dark" role="search" action="search-page.html"
+      method="get">
+      <label class="visually-hidden" for="site-search">Cari berita</label>
+      <input class="form-control search-input flex-grow-1" id="site-search" type="search" name="q"
+        placeholder="Cari berita..." aria-label="Cari berita">
+      <button class="btn search-button ms-2" type="submit" aria-label="Cari berita">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path stroke-linecap="round" d="m16 16 4 4"></path>
+        </svg>
+      </button>
+    </form>
+    <div class="dropdown profile-dropdown ms-2">
+      <button class="btn login-button d-inline-flex align-items-center justify-content-center p-2" type="button"
+        data-bs-toggle="dropdown" aria-expanded="false" aria-label="Buka menu akun">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"></circle>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 21a7 7 0 0 1 14 0"></path>
+        </svg>
+      </button>
+      <div class="dropdown-menu dropdown-menu-end profile-menu">
+        <div class="profile-menu-header">
+          <span class="profile-avatar" aria-hidden="true">T</span>
+          <div>
+            <strong>Mustofa Ganteng</strong>
+            <a href="#">mustofagantenggacor@gmail.com</a>
+          </div>
+        </div>
+        <a class="dropdown-item" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 3.75h12a1 1 0 0 1 1 1V21l-7-4-7 4V4.75a1 1 0 0 1 1-1Z"></path>
+          </svg>
+          Konten yang disimpan
+        </a>
+        <a class="dropdown-item" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M7 10v10H4V10h3Zm3 10h7.2a2 2 0 0 0 1.94-1.52l1.5-6A2 2 0 0 0 18.7 10H14l.7-3.1A2.4 2.4 0 0 0 12.35 4L8 10v10Z">
+            </path>
+          </svg>
+          Konten yang disukai
+        </a>
+        <a class="dropdown-item" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+            <circle cx="9" cy="6" r="2"></circle>
+            <circle cx="15" cy="12" r="2"></circle>
+            <circle cx="8" cy="18" r="2"></circle>
+          </svg>
+          Atur Minat
+        </a>
+        <a class="dropdown-item" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path
+              d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42">
+            </path>
+          </svg>
+          Atur mode
+        </a>
+        <a class="dropdown-item" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 5.5h16v12H9l-5 3v-15Z"></path>
+            <path d="m12 8 1.1 2.2 2.4.35-1.75 1.7.4 2.4L12 13.5l-2.15 1.15.4-2.4-1.75-1.7 2.4-.35L12 8Z"></path>
+          </svg>
+          Berikan Masukan
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg main-nav" aria-label="Navigasi utama">
+    <div class="container">
+      <button class="navbar-toggler py-1" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+        aria-controls="mainMenu" aria-expanded="false" aria-label="Buka navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown column-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Kolom
+            </button>
+            <ul class="dropdown-menu nav-column-menu profile-menu">
+              <li><a class="dropdown-item" aria-current="page" href="kolumnis.html">Kolumnis</a></li>
+              <li><a class="dropdown-item" href="#">Indeks</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Nasional</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Regional</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Ekonomi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Tekno</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Lifestyle</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Olahraga</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Otomotif</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Food</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Video</a></li>
+          <li class="nav-item"><a class="nav-link" href="hoaks.html">Cek Fakta</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="bg-white border-bottom" aria-label="Bagian kolom">
+    <div class="container d-flex align-items-center gap-3 py-1">
+      <h1 class="column-section-title border-end border-2 pe-3 fs-5 fw-bold mb-0">Kolom</h1>
+      <nav class="nav column-section-nav" aria-label="Navigasi kolom">
+        <a class="nav-link active px-3 py-2" href="kolumnis.html" aria-current="page">Kolumnis</a>
+        <a class="nav-link px-3 py-2" href="indeks.html">Indeks</a>
+      </nav>
+    </div>
+  </section>
+
+  <main class="container py-4">
+    <section aria-label="Daftar kolumnis">
+      <div class="row g-3 g-md-4" id="daftar-kolumnis" aria-live="polite">
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2">
+            <a class="d-block" href="search-page.html?q=Raditya+Maulana+Asdi">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%">
+                <img class="w-100 h-100 rounded-circle object-fit-cover" src="assets/img/foto2.webp" alt=""
+                  loading="lazy">
+              </div>
+              <h3 class="fs-6 fw-bold mb-1">Raditya Maulana Asdi</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Aidha+Rianti+Sabrina">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold mb-1">Aidha Rianti Sabrina</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Mustofa+Mahmudi+Arifin">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold mb-1">Mustofa Mahmudi Arifin</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Alya+Ramadhani">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold mb-1">Alya Ramadhani</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Virby+Ilona">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold mb-1">Virby Ilona</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Raditya+Maulana+Asdi">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Raditya Maulana Asdi</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Aidha+Rianti+Sabrina">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Aidha Rianti Sabrina</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Mustofa+Mahmudi+Arifin">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Mustofa Mahmudi Arifin</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Alya+Ramadhani">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Alya Ramadhani</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Virby+Ilona">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Virby Ilona</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Raditya+Maulana+Asdi">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Raditya Maulana Asdi</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Aidha+Rianti+Sabrina">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Aidha Rianti Sabrina</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Mustofa+Mahmudi+Arifin">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Mustofa Mahmudi Arifin</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Alya+Ramadhani">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Alya Ramadhani</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Virby+Ilona">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Virby Ilona</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Raditya+Maulana+Asdi">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Raditya Maulana Asdi</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Aidha+Rianti+Sabrina">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Aidha Rianti Sabrina</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Mustofa+Mahmudi+Arifin">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Mustofa Mahmudi Arifin</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Alya+Ramadhani">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Alya Ramadhani</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Virby+Ilona">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Virby Ilona</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Raditya+Maulana+Asdi">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Raditya Maulana Asdi</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Aidha+Rianti+Sabrina">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Aidha Rianti Sabrina</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Mustofa+Mahmudi+Arifin">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Mustofa Mahmudi Arifin</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Alya+Ramadhani">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Alya Ramadhani</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Virby+Ilona">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Virby Ilona</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Raditya+Maulana+Asdi">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Raditya Maulana Asdi</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Aidha+Rianti+Sabrina">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Aidha Rianti Sabrina</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Mustofa+Mahmudi+Arifin">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Mustofa Mahmudi Arifin</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Alya+Ramadhani">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Alya Ramadhani</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Virby+Ilona">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Virby Ilona</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Raditya+Maulana+Asdi">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Raditya Maulana Asdi</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Aidha+Rianti+Sabrina">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Aidha Rianti Sabrina</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Mustofa+Mahmudi+Arifin">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Mustofa Mahmudi Arifin</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Alya+Ramadhani">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Alya Ramadhani</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Virby+Ilona">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Virby Ilona</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 kolumnis-item">
+          <article class="h-100 text-center p-2"><a class="d-block" href="search-page.html?q=Raditya+Maulana+Asdi">
+              <div class="ratio ratio-1x1 mx-auto mb-2" style="width: 55%"><img class="w-100 h-100 rounded-circle object-fit-cover"
+                  src="assets/img/foto2.webp" alt="" loading="lazy"></div>
+              <h3 class="fs-6 fw-bold text-dark mb-1">Raditya Maulana Asdi</h3>
+              <p class="small text-secondary mb-0">Kolumnis Timpa.com</p>
+            </a></article>
+        </div>
+      </div>
+
+      <nav class="mt-4" aria-label="Halaman daftar kolumnis"> 
+        <ul class="pagination justify-content-center mb-0" id="navigasi-kolumnis">
+        </ul>
+      </nav>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer-main">
+        <a class="site-footer-brand" href="#" aria-label="Timpa.com beranda">Timpa<span>.com</span></a>
+        <p>Tajam · Terpercaya · Terdepan</p>
+        <nav class="site-footer-nav" aria-label="Navigasi footer">
+          <a href="#">Tentang Kami</a>
+          <a href="kolumnis.html" aria-current="page">Kolumnis</a>
+          <a href="#">Indeks</a>
+          <a href="#">Nasional</a>
+          <a href="#">Regional</a>
+          <a href="#">Ekonomi</a>
+          <a href="#">Tekno</a>
+          <a href="#">Lifestyle</a>
+          <a href="#">Olahraga</a>
+          <a href="#">Otomotif</a>
+          <a href="#">Food</a>
+          <a href="#">Video</a>
+          <a href="hoaks.html">Cek Fakta</a>
+        </nav>
+      </div>
+      <div class="site-footer-bottom">
+        <span>© 2026 Timpa.com. Mantap Gacor Wadidaw Acikiwir.</span>
+        <span>Berita hari ini, untuk semua.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script>
+    if (!window.bootstrap) {
+      const navToggle = document.querySelector(".navbar-toggler");
+      const navMenu = document.getElementById("mainMenu");
+
+      navToggle.addEventListener("click", () => {
+        const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+        navToggle.setAttribute("aria-expanded", String(!isExpanded));
+        navMenu.classList.toggle("show", !isExpanded);
+      });
+    }
+  </script>
+  <script>
+    const kolumnisPerHalaman = 12;
+    const navigasiKolumnis = document.getElementById("navigasi-kolumnis");
+    const daftarKolumnis = [...document.querySelectorAll(".kolumnis-item")];
+    const jumlahHalaman = Math.ceil(daftarKolumnis.length / kolumnisPerHalaman);
+    let halamanAktif = 1;
+
+    function buatTombolNavigasi(teks, label, arah) {
+      const item = document.createElement("li");
+      item.className = "page-item";
+      item.dataset.direction = arah;
+
+      const tombol = document.createElement("button");
+      tombol.className = "page-link rounded-circle mx-1";
+      tombol.type = "button";
+      tombol.textContent = teks;
+      tombol.setAttribute("aria-label", label);
+      item.append(tombol);
+      navigasiKolumnis.append(item);
+    }
+
+    function tampilkanHalaman(halaman) {
+      halamanAktif = Math.min(Math.max(halaman, 1), jumlahHalaman);
+      daftarKolumnis.forEach((kolumnis, indeks) => {
+        const halamanKolumnis = Math.floor(indeks / kolumnisPerHalaman) + 1;
+        kolumnis.classList.toggle("d-none", halamanKolumnis !== halamanAktif);
+      });
+
+      navigasiKolumnis.replaceChildren();
+      if (halamanAktif > 1) {
+        buatTombolNavigasi("‹", "Halaman sebelumnya", "prev");
+      }
+
+      for (let halamanNomor = 1; halamanNomor <= jumlahHalaman; halamanNomor += 1) {
+        const item = document.createElement("li");
+        item.className = `page-item${halamanNomor === halamanAktif ? " active" : ""}`;
+        item.dataset.page = String(halamanNomor);
+
+        const tombol = document.createElement("button");
+        tombol.className = "page-link rounded-circle mx-1";
+        tombol.type = "button";
+        tombol.textContent = String(halamanNomor);
+        tombol.setAttribute("aria-label", `Halaman ${halamanNomor}`);
+        if (halamanNomor === halamanAktif) {
+          tombol.setAttribute("aria-current", "page");
+        }
+        item.append(tombol);
+        navigasiKolumnis.append(item);
+      }
+
+      if (halamanAktif < jumlahHalaman) {
+        buatTombolNavigasi("›", "Halaman berikutnya", "next");
+        buatTombolNavigasi("»", "Halaman terakhir", "last");
+      }
+    }
+
+    navigasiKolumnis.addEventListener("click", (event) => {
+      const tombol = event.target.closest("button");
+      if (!tombol) return;
+
+      const itemHalaman = tombol.closest("[data-page]");
+      if (itemHalaman) {
+        tampilkanHalaman(Number(itemHalaman.dataset.page));
+        return;
+      }
+
+      const itemArah = tombol.closest("[data-direction]");
+      const arah = itemArah ? itemArah.dataset.direction : "";
+      if (arah === "prev") tampilkanHalaman(halamanAktif - 1);
+      if (arah === "next") tampilkanHalaman(halamanAktif + 1);
+      if (arah === "last") tampilkanHalaman(jumlahHalaman);
+    });
+
+    tampilkanHalaman(halamanAktif);
+  </script>
+</body>
+
+</html>
