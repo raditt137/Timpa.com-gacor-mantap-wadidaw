@@ -190,29 +190,18 @@ a {
     border-bottom-color: var(--timpa-blue);
 }
 
-#navigasi-kolumnis .page-link {
-    align-items: center;
-    background: #fff;
-    border: 1px solid var(--timpa-line);
-    border-radius: 50%;
-    color: var(--timpa-dark);
-    display: flex;
-    font-size: 0.85rem;
-    height: 45px;
-    justify-content: center;
-    padding: 0;
-    width: 45px;
+.kolumnis-item .ratio-1x1 {
+    --bs-aspect-ratio: 125%;
 }
 
-#navigasi-kolumnis .page-link:hover,
-#navigasi-kolumnis .page-item.active .page-link {
-    background: #fff;
-    border-color: var(--timpa-blue);
-    color: var(--timpa-blue);
+.kolumnis-item:nth-child(n + 7) {
+    display: none;
 }
 
-#navigasi-kolumnis .page-item.disabled .page-link {
-    color: var(--timpa-muted);
+@media (min-width: 768px) {
+    #daftar-kolumnis > .kolumnis-item {
+        width: 33.33333333%;
+    }
 }
 
 .site-footer {
