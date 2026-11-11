@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indeks Berita | Timpa.com</title>
+
+  <!-- CSS Bootstrap 5.3.3 dari CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="indeks.css">
+</head>
+
+<body>
+  <div class="utility-bar">
+    <div class="container d-flex justify-content-between py-2">
+      <span>Senin, 2 November 2026</span>
+      <span class="d-none d-sm-inline">Berita hari ini, untuk semua</span>
+    </div>
+  </div>
+
+  <header class="container brand-row d-flex align-items-center justify-content-between">
+    <a class="d-inline-flex flex-column" href="#" aria-label="Timpa.com beranda">
+      <span class="brand-mark">Timpa<span>.com</span></span>
+      <span class="brand-tagline">Tajam · Terpercaya · Terdepan</span>
+    </a>
+    <form class="d-flex align-items-center flex-grow-1 ms-4 border-dark" role="search" action="search-page.html"
+      method="get">
+      <label class="visually-hidden" for="site-search">Cari berita</label>
+      <input class="form-control search-input flex-grow-1" id="site-search" type="search" name="q"
+        placeholder="Cari berita..." aria-label="Cari berita">
+      <button class="btn search-button ms-2" type="submit" aria-label="Cari berita">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path stroke-linecap="round" d="m16 16 4 4"></path>
+        </svg>
+      </button>
+    </form>
+    <div class="dropdown profile-dropdown ms-2">
+      <button class="btn login-button d-inline-flex align-items-center justify-content-center p-2" type="button"
+        data-bs-toggle="dropdown" aria-expanded="false" aria-label="Buka menu akun">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"></circle>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 21a7 7 0 0 1 14 0"></path>
+        </svg>
+      </button>
+      <div class="dropdown-menu dropdown-menu-end profile-menu">
+        <div class="profile-menu-header">
+          <span class="profile-avatar" aria-hidden="true">T</span>
+          <div>
+            <strong>Mustofa Ganteng</strong>
+            <a href="#">mustofagantenggacor@gmail.com</a>
+          </div>
+        </div>
+        <a class="dropdown-item" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 3.75h12a1 1 0 0 1 1 1V21l-7-4-7 4V4.75a1 1 0 0 1 1-1Z"></path>
+          </svg>
+          Konten yang disimpan
+        </a>
+        <a class="dropdown-item" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M7 10v10H4V10h3Zm3 10h7.2a2 2 0 0 0 1.94-1.52l1.5-6A2 2 0 0 0 18.7 10H14l.7-3.1A2.4 2.4 0 0 0 12.35 4L8 10v10Z">
+            </path>
+          </svg>
+          Konten yang disukai
+        </a>
+        <a class="dropdown-item" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+            <circle cx="9" cy="6" r="2"></circle>
+            <circle cx="15" cy="12" r="2"></circle>
+            <circle cx="8" cy="18" r="2"></circle>
+          </svg>
+          Atur Minat
+        </a>
+        <a class="dropdown-item" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path
+              d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42">
+            </path>
+          </svg>
+          Atur mode
+        </a>
+        <a class="dropdown-item" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 5.5h16v12H9l-5 3v-15Z"></path>
+            <path d="m12 8 1.1 2.2 2.4.35-1.75 1.7.4 2.4L12 13.5l-2.15 1.15.4-2.4-1.75-1.7 2.4-.35L12 8Z"></path>
+          </svg>
+          Berikan Masukan
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg main-nav" aria-label="Navigasi utama">
+    <div class="container">
+      <button class="navbar-toggler py-1" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+        aria-controls="mainMenu" aria-expanded="false" aria-label="Buka navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown column-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Kolom
+            </button>
+            <ul class="dropdown-menu nav-column-menu profile-menu">
+              <li><a class="dropdown-item" href="kolumnis.html">Kolumnis</a></li>
+              <li><a class="dropdown-item" aria-current="page" href="indeks.html">Indeks</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Nasional</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Regional</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Ekonomi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Tekno</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Lifestyle</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Olahraga</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Otomotif</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Food</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Video</a></li>
+          <li class="nav-item"><a class="nav-link" href="hoaks.html">Cek Fakta</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="bg-white border-bottom" aria-label="Bagian kolom">
+    <div class="container d-flex align-items-center gap-3 py-1">
+      <h1 class="column-section-title border-end border-2 pe-3 fs-5 fw-bold mb-0">Kolom</h1>
+      <nav class="nav column-section-nav" aria-label="Navigasi kolom">
+        <a class="nav-link px-3 py-2" href="kolumnis.html">Kolumnis</a>
+        <a class="nav-link active px-3 py-2" href="indeks.html" aria-current="page">Indeks</a>
+      </nav>
+    </div>
+  </section>
+
+  <main class="container search-page index-page py-4">
+    <div class="row g-4">
+      <section class="col-lg-8" aria-labelledby="index-heading">
+
+        <div class="index-intro">
+          <span class="category-label">ARSIP TIMPA.COM</span>
+          <h1 class="search-summary" id="index-heading">Indeks Berita</h1>
+          <p>Telusuri arsip berita berdasarkan tanggal dan kanal pilihan.</p>
+        </div>
+
+        <section class="index-filter-card" aria-labelledby="index-filter-heading">
+          <h2 id="index-filter-heading">Jelajahi Arsip</h2>
+          <form class="index-filter-form" action="indeks.html" method="get">
+            <div class="index-filter-field">
+              <label for="index-start-date">Dari tanggal</label>
+              <input class="form-control" id="index-start-date" name="from" type="date">
+            </div>
+            <div class="index-filter-field">
+              <label for="index-end-date">Sampai tanggal</label>
+              <input class="form-control" id="index-end-date" name="to" type="date">
+            </div>
+            <div class="index-filter-field">
+              <label for="index-channel">Kanal</label>
+              <select class="form-select" id="index-channel" name="channel">
+                <option value="">Semua kanal</option>
+                <option value="Nasional">Nasional</option>
+                <option value="Regional">Regional</option>
+                <option value="Ekonomi">Ekonomi</option>
+                <option value="Tekno">Tekno</option>
+                <option value="Lifestyle">Lifestyle</option>
+                <option value="Olahraga">Olahraga</option>
+              </select>
+            </div>
+            <button class="index-filter-submit" type="submit">Jelajahi indeks</button>
+          </form>
+        </section>
+
+        <section class="index-news-section mt-4" aria-labelledby="index-news-heading">
+          <div class="section-heading">
+            <h2 id="index-news-heading">Berita terbaru</h2>
+          </div>
+          <div class="search-results">
+            <article class="search-result">
+              <a class="search-result-image" href="isi-berita.html">
+                <img src="assets/img/foto2.webp" alt="Presiden Prabowo Subianto sedang berbicara" loading="lazy">
+              </a>
+              <div class="search-result-copy">
+                <span class="category-label">Nasional</span>
+                <h2><a href="isi-berita.html">Prabowo: Mereka yang Serakah dan Bermental Mafia Pasti Akan Gagal</a></h2>
+                <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 2 November 2026</p>
+                <p class="search-result-excerpt">Prabowo mengingatkan pentingnya menjaga Pancasila dan NKRI serta menolak perampasan kekayaan negara.</p>
+              </div>
+            </article>
+            <article class="search-result">
+              <a class="search-result-image" href="#">
+                <img src="assets/img/foto6.webp" alt="Kapolri Jenderal Listyo Sigit Prabowo" loading="lazy">
+              </a>
+              <div class="search-result-copy">
+                <span class="category-label">Nasional</span>
+                <h2><a href="#">Menelusuri Dalang Penyadapan Presiden Prabowo</a></h2>
+                <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 2 November 2026</p>
+                <p class="search-result-excerpt">Simak laporan Timpa.com mengenai dugaan penyadapan terhadap Presiden dan perkembangan penyelidikannya.</p>
+              </div>
+            </article>
+            <article class="search-result">
+              <a class="search-result-image" href="#">
+                <img src="assets/img/foto1.webp" alt="Warga beraktivitas di tengah kota" loading="lazy">
+              </a>
+              <div class="search-result-copy">
+                <span class="category-label">Nasional</span>
+                <h2><a href="#">Prabowo Tekankan Pentingnya Persatuan untuk Menjaga Keutuhan Bangsa</a></h2>
+                <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 28 Oktober 2026</p>
+                <p class="search-result-excerpt">Presiden mengajak seluruh elemen masyarakat menjaga persatuan dan mengutamakan kepentingan bangsa.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <aside class="col-lg-4 search-sidebar" aria-labelledby="index-picks-heading">
+        <section>
+          <div class="section-heading">
+            <h2 id="index-picks-heading">Pilihan Timpa</h2>
+          </div>
+          <div class="search-picks">
+            <article class="side-story">
+              <img src="assets/img/foto7.webp" alt="Pelaku usaha berjualan melalui siaran langsung" loading="lazy">
+              <div>
+                <span class="category-label">Ekonomi</span>
+                <h3><a href="#">Rupiah Tembus 18.000, UMKM Diminta Rela Untung Tipis Ketimbang Gulung Tikar</a></h3>
+                <div class="story-meta">1 jam lalu</div>
+              </div>
+            </article>
+            <article class="side-story">
+              <img src="assets/img/foto4.webp" alt="Barisan polisi dengan perlengkapan pengamanan" loading="lazy">
+              <div>
+                <span class="category-label">Nasional</span>
+                <h3><a href="#">Kronologi 7 Polisi Surabaya Dimutasi Usai Ungkap Kasus Narkoba 3 Anggota DPRD</a></h3>
+                <div class="story-meta">4 jam lalu</div>
+              </div>
+            </article>
+            <article class="side-story">
+              <img src="assets/img/foto10.webp" alt="Suasana pusat perbelanjaan Pasar Butung Makassar" loading="lazy">
+              <div>
+                <span class="category-label">Regional</span>
+                <h3><a href="#">Warga Pasar Butung Makassar Keluhkan Pemadaman Listrik Bergilir</a></h3>
+                <div class="story-meta">5 jam lalu</div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="app-promo instagram-promo mt-4" aria-labelledby="instagram-promo-heading">
+          <h2 id="instagram-promo-heading">Ikuti Instagram @raditt.png</h2>
+          <p>Pindai kode QR untuk mengunjungi profil Instagram.</p>
+          <a class="instagram-qr" href="https://www.instagram.com/raditt.png/" target="_blank"
+            rel="noopener noreferrer" aria-label="Buka profil Instagram raditt.png">
+            <img src="instagram-qr.svg" alt="Kode QR menuju profil Instagram raditt.png">
+          </a>
+          <p class="app-promo-note">Arahkan kamera ponsel ke kode QR.</p>
+          <div class="app-store-badges" aria-label="Badge toko aplikasi, belum aktif">
+            <span class="app-store-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.8c0-2 1.6-3 1.7-3.1a3.7 3.7 0 0 0-2.9-1.6c-1.2-.1-2.4.7-3 .7s-1.5-.7-2.5-.7a3.8 3.8 0 0 0-3.2 1.9c-1.4 2.4-.4 6 1 8 .7 1 1.4 2 2.4 2s1.3-.6 2.5-.6 1.6.6 2.5.6 1.6-.9 2.2-1.9c.7-1 1-2 1-2.1-.1 0-1.7-.7-1.7-3.2ZM14.4 6.8a3.6 3.6 0 0 0 .8-2.5 3.7 3.7 0 0 0-2.4 1.2 3.4 3.4 0 0 0-.8 2.4 3 3 0 0 0 2.4-1.1Z" /></svg>
+              <span><small>Download di</small><strong>App Store</strong></span>
+            </span>
+            <span class="app-store-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34a853" d="M3 2.7v18.6L13.2 12 3 2.7Z" /><path fill="#4285f4" d="m3 21.3 12.5-7.2-2.3-2.1L3 21.3Z" /><path fill="#fbbc04" d="m15.5 9.9-2.3 2.1 2.3 2.1 4.1-2.4c.8-.5.8-1.2 0-1.7l-4.1-2.4Z" /><path fill="#ea4335" d="M3 2.7 13.2 12l2.3-2.1L3 2.7Z" /></svg>
+              <span><small>Temukan di</small><strong>Google Play</strong></span>
+            </span>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer-main">
+        <a class="site-footer-brand" href="#" aria-label="Timpa.com beranda">Timpa<span>.com</span></a>
+        <p>Tajam · Terpercaya · Terdepan</p>
+        <nav class="site-footer-nav" aria-label="Navigasi footer">
+          <a href="#">Tentang Kami</a>
+          <a href="kolumnis.html">Kolumnis</a>
+          <a href="indeks.html" aria-current="page">Indeks</a>
+          <a href="#">Nasional</a>
+          <a href="#">Regional</a>
+          <a href="#">Ekonomi</a>
+          <a href="#">Tekno</a>
+          <a href="#">Lifestyle</a>
+          <a href="#">Olahraga</a>
+          <a href="#">Otomotif</a>
+          <a href="#">Food</a>
+          <a href="#">Video</a>
+          <a href="hoaks.html">Cek Fakta</a>
+        </nav>
+      </div>
+      <div class="site-footer-bottom">
+        <span>© 2026 Timpa.com. Mantap Gacor Wadidaw Acikiwir.</span>
+        <span>Berita hari ini, untuk semua.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script>
+    if (!window.bootstrap) {
+      const navToggle = document.querySelector(".navbar-toggler");
+      const navMenu = document.getElementById("mainMenu");
+
+      navToggle.addEventListener("click", () => {
+        const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+        navToggle.setAttribute("aria-expanded", String(!isExpanded));
+        navMenu.classList.toggle("show", !isExpanded);
+      });
+    }
+  </script>
+</body>
+
+</html>
