@@ -331,18 +331,20 @@ a {
 .shopee-ad-icon {
     align-items: center;
     background: #fff;
-    border-radius: 50%;
+    border-radius: 6px;
     color: #ee4d2d;
     display: flex;
-    flex: 0 0 64px;
-    height: 64px;
+    flex: 0 0 54px;
+    height: 76px;
     justify-content: center;
-    width: 64px;
+    width: 54px;
 }
 
-.shopee-ad-icon svg {
-    height: 38px;
-    width: 38px;
+.shopee-ad-icon img {
+    height: 100%;
+    object-fit: contain;
+    padding: 3px;
+    width: 100%;
 }
 
 .shopee-ad-copy {
@@ -379,14 +381,13 @@ a {
     }
 
     .shopee-ad-icon {
-        flex-basis: 48px;
-        height: 48px;
-        width: 48px;
+        flex-basis: 42px;
+        height: 60px;
+        width: 42px;
     }
 
-    .shopee-ad-icon svg {
-        height: 30px;
-        width: 30px;
+    .shopee-ad-icon img {
+        padding: 2px;
     }
 
     .shopee-ad-copy {
@@ -744,14 +745,9 @@ a {
 }
 
 .kolom-samping-cek-fakta .shopee-ad-icon {
-    flex-basis: 62px;
-    height: 62px;
-    width: 62px;
-}
-
-.kolom-samping-cek-fakta .shopee-ad-icon svg {
-    height: 36px;
-    width: 36px;
+    flex-basis: 54px;
+    height: 76px;
+    width: 54px;
 }
 
 .kolom-samping-cek-fakta .shopee-ad-copy {
