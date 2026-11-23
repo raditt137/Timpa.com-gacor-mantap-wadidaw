@@ -277,204 +277,152 @@
 
 
     <!-- Main Content -->
-    <main class="container py-4">
+    <main class="container pt-3 pb-5">
+        <header class="mb-3">
 
-        <div class="row">
-
-            <div class="col-12 col-lg-8">
-
-                <!-- Judul -->
-                <h3 class="d-inline-block bg-danger text-white fw-bold p-2 mb-4">
-                    LAPORKAN HOAKS
-                </h3>
-
-
-                <!-- Deskripsi -->
-                <p class="text-secondary mb-5">
-
-                    Sistem pelaporan hoaks ini merupakan kerjasama dengan
-                    TurnBackHoax – Masyarakat Anti Fitnah Indonesia.
-
-                    Laporan yang Anda kirim akan diterima oleh tim
-                    TurnBackHoax.
-
-                    Penentuan respons dan verifikasi setiap laporan akan
-                    mengikuti sistem di TurnBackHoax.
-
+            <h1 class="d-inline-block fs-2 fw-bold text-uppercase text-white bg-danger rounded-1
+                       shadow-sm px-3 py-2 mb-3" id="report-title">Laporkan Hoaks</h1>
+            <div class="row">
+                <p class="col-12 col-xl-10 col-xxl-9 text-secondary lh-lg mb-3">
+                    Temukan informasi yang meragukan? Kirimkan laporan beserta bukti pendukung.
+                    Tim TurnBackHoax–Masyarakat Anti Fitnah Indonesia akan meninjau dan memverifikasi laporan Anda.
                 </p>
-
-
-                <!-- Form Laporan -->
-                <form id="formHoaks">
-
-
-                    <!-- Nama -->
-                    <div class="mb-4">
-
-                        <label for="nama" class="form-label fw-medium">
-                            Nama Anda (Required)
-                        </label>
-
-                        <input type="text"
-                               class="form-control"
-                               id="nama"
-                               name="nama"
-                               placeholder="Masukkan nama Anda"
-                               required>
-
-                    </div>
-
-
-                    <!-- Email -->
-                    <div class="mb-4">
-
-                        <label for="email" class="form-label fw-medium">
-                            Email (Required)
-                        </label>
-
-                        <input type="email"
-                               class="form-control"
-                               id="email"
-                               name="email"
-                               placeholder="Masukkan email Anda"
-                               required>
-
-                    </div>
-
-
-                    <!-- Judul Laporan -->
-                    <div class="mb-4">
-
-                        <label for="judulLaporan" class="form-label fw-medium">
-                            Judul Laporan
-                        </label>
-
-                        <input type="text"
-                               class="form-control"
-                               id="judulLaporan"
-                               name="judulLaporan"
-                               placeholder="Masukkan judul laporan">
-
-                    </div>
-
-
-                    <!-- Teks Hoaks -->
-                    <div class="mb-4">
-
-                        <label for="teksHoaks" class="form-label fw-medium">
-                            Teks Hoaks
-                        </label>
-
-                        <p class="text-secondary mb-2">
-                            (copy-paste apa adanya, jangan ada yang diubah)
-                        </p>
-
-                        <textarea class="form-control"
-                                  id="teksHoaks"
-                                  name="teksHoaks"
-                                  rows="4"
-                                  placeholder="Masukkan teks hoaks">
-
-                        </textarea>
-
-                    </div>
-
-
-                    <!-- Pesan -->
-                    <div class="mb-4">
-
-                        <label for="pesan" class="form-label fw-medium">
-                            Pesan dari Anda
-                        </label>
-
-                        <textarea class="form-control"
-                                  id="pesan"
-                                  name="pesan"
-                                  rows="4"
-                                  placeholder="Tuliskan pesan Anda">
-
-                        </textarea>
-
-                    </div>
-
-
-                    <!-- Upload File 1 -->
-                    <div class="mb-4">
-
-                        <label for="file1" class="form-label fw-medium">
-                            Upload File / screenshot
-                        </label>
-
-                        <input type="file"
-                               class="form-control"
-                               id="file1"
-                               name="file1"
-                               accept="image/*">
-
-                    </div>
-
-
-                    <!-- Upload File 2 -->
-                    <div class="mb-4">
-
-                        <label for="file2" class="form-label fw-medium">
-                            Upload File / screenshot
-                        </label>
-
-                        <input type="file"
-                               class="form-control"
-                               id="file2"
-                               name="file2"
-                               accept="image/*">
-
-                    </div>
-
-
-                    <!-- CAPTCHA Simulasi -->
-                    <div class="mb-4">
-
-                        <div class="bg-white border rounded p-3 d-flex align-items-center gap-2">
-
-                            <input type="checkbox"
-                                   class="form-check-input"
-                                   id="robot">
-
-                            <label for="robot" class="form-check-label">
-                                I'm not a robot
-                            </label>
-
-                            <div class="ms-auto text-center">
-
-                                <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
-                                     alt="reCAPTCHA"
-                                     width="35">
-
-                                <p class="small text-secondary mb-0">
-                                    reCAPTCHA
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Tombol Kirim -->
-                    <button type="submit"
-                            class="btn btn-primary w-100">
-
-                        KIRIM
-
-                    </button>
-
-                </form>
-
             </div>
+        </header>
 
-        </div>
+        <form id="formHoaks" class="bg-white border rounded-4 shadow-sm p-3 p-md-4 p-lg-5"
+              aria-labelledby="report-title" novalidate>
+            <div class="row g-4">
+                <div class="col-12 col-md-6">
+                    <label for="nama" class="form-label fw-semibold">
+                        Nama Anda <span class="text-danger" aria-hidden="true">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="nama" name="nama"
+                           placeholder="Masukkan nama Anda" aria-describedby="namaError"
+                           data-required-message="Nama wajib diisi." required>
+                    <div class="invalid-feedback" id="namaError">Nama wajib diisi.</div>
+                </div>
 
+                <div class="col-12 col-md-6">
+                    <label for="email" class="form-label fw-semibold">
+                        Email <span class="text-danger" aria-hidden="true">*</span>
+                    </label>
+                    <input type="email" class="form-control" id="email" name="email"
+                           placeholder="Masukkan email Anda" aria-describedby="emailError"
+                           data-required-message="Email wajib diisi."
+                           data-invalid-message="Format email belum valid." required>
+                    <div class="invalid-feedback" id="emailError">Email wajib diisi.</div>
+                </div>
+
+                <div class="col-12">
+                    <label for="judulLaporan" class="form-label fw-semibold">
+                        Judul Laporan <span class="text-danger" aria-hidden="true">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="judulLaporan" name="judulLaporan"
+                           placeholder="Masukkan judul laporan" aria-describedby="judulLaporanError"
+                           data-required-message="Judul laporan wajib diisi." required>
+                    <div class="invalid-feedback" id="judulLaporanError">Judul laporan wajib diisi.</div>
+                </div>
+
+                <div class="col-12">
+                    <label for="teksHoaks" class="form-label fw-semibold">
+                        Teks Hoaks <span class="text-danger" aria-hidden="true">*</span>
+                    </label>
+                    <textarea class="form-control" id="teksHoaks" name="teksHoaks" rows="4"
+                              placeholder="Masukkan teks hoaks" aria-describedby="teksHoaksError"
+                              data-required-message="Teks hoaks wajib diisi." required></textarea>
+                    <div class="invalid-feedback" id="teksHoaksError">Teks hoaks wajib diisi.</div>
+                    <div class="form-text">(copy-paste apa adanya, jangan ada yang diubah)</div>
+                </div>
+
+                <div class="col-12">
+                    <label for="pesan" class="form-label fw-semibold">
+                        Pesan dari Anda <span class="text-danger" aria-hidden="true">*</span>
+                    </label>
+                    <textarea class="form-control" id="pesan" name="pesan" rows="4"
+                              placeholder="Tuliskan pesan Anda" aria-describedby="pesanError"
+                              data-required-message="Pesan dari Anda wajib diisi." required></textarea>
+                    <div class="invalid-feedback" id="pesanError">Pesan dari Anda wajib diisi.</div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="fileScreenshot" class="form-label fw-semibold">
+                        Unggah Screenshot (Opsional)
+                    </label>
+                    <div class="d-flex align-items-center gap-2 border rounded bg-light p-2">
+                        <input class="visually-hidden" type="file" id="fileScreenshot" name="fileScreenshot"
+                               accept="image/*" aria-describedby="fileScreenshotName">
+                        <label class="btn btn-outline-secondary d-inline-flex align-items-center gap-2 py-2
+                                      text-nowrap mb-0" for="fileScreenshot">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                                <path d="M12 16V4m0 0L7 9m5-5 5 5M5 15v4a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-4"></path>
+                            </svg>
+                            Pilih file
+                        </label>
+                        <span class="small text-secondary text-truncate flex-grow-1" id="fileScreenshotName"
+                              aria-live="polite">Belum ada file dipilih</span>
+                    </div>
+                    <div class="form-text">Unggah satu gambar sebagai bukti pendukung.</div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <span class="form-label d-block invisible" aria-hidden="true">
+                        Unggah Screenshot (Opsional)
+                    </span>
+                    <div class="d-flex align-items-center gap-3 border rounded-1 bg-light p-2">
+                        <input type="checkbox" class="visually-hidden" id="robot">
+                        <label for="robot" class="form-check-label d-flex align-items-center gap-3 mb-0">
+                            <span class="d-inline-flex align-items-center justify-content-center flex-shrink-0"
+                                  id="robotIndicator">
+                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+                                    <rect class="text-secondary" id="robotBoxOutline" x="1.5" y="1.5"
+                                          width="31" height="31" stroke="currentColor" stroke-width="2.5"></rect>
+                                    <path class="text-success d-none" id="robotCheckMark"
+                                          d="M3 17 12.5 26.5 31 5.5" stroke="currentColor" stroke-width="3.5"
+                                          stroke-linecap="square" stroke-linejoin="miter"></path>
+                                </svg>
+                            </span>
+                            <span>I'm not a robot</span>
+                        </label>
+                        <div class="ms-auto text-center">
+                            <img class="d-block mx-auto" src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
+                                 alt="reCAPTCHA" width="27" height="27">
+                            <small class="d-block text-secondary lh-1"><small>reCAPTCHA</small></small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary w-100 d-flex align-items-center
+                                                  justify-content-center gap-2 py-3 fw-bold">
+                        <span>Kirim Laporan</span>
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M5 12h14M13 6l6 6-6 6"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </form>
     </main>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast bg-white text-dark border border-2 border-warning shadow rounded-3"
+             id="reportNotification" role="status" aria-live="polite" aria-atomic="true" hidden>
+            <div class="d-flex align-items-start gap-3 p-3">
+                <span class="d-inline-flex align-items-center justify-content-center rounded-circle
+                             bg-warning-subtle text-warning-emphasis fw-bold px-3 py-2 flex-shrink-0"
+                      id="reportNotificationIcon" aria-hidden="true">!</span>
+                <div class="flex-grow-1">
+                    <strong class="d-block mb-1" id="reportNotificationTitle"></strong>
+                    <span class="small" id="reportNotificationMessage"></span>
+                </div>
+                <button class="btn-close mt-1" id="closeReportNotification" type="button"
+                        aria-label="Tutup notifikasi"></button>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Footer -->
@@ -536,26 +484,130 @@
     <!-- Validasi Form -->
     <script>
 
-        document.getElementById("formHoaks").addEventListener("submit", function(event) {
+        const screenshotInput = document.getElementById("fileScreenshot");
+        const screenshotFileName = document.getElementById("fileScreenshotName");
+        const reportNotification = document.getElementById("reportNotification");
+        const reportNotificationIcon = document.getElementById("reportNotificationIcon");
+        const reportNotificationTitle = document.getElementById("reportNotificationTitle");
+        const reportNotificationMessage = document.getElementById("reportNotificationMessage");
+        const closeReportNotification = document.getElementById("closeReportNotification");
+        const reportForm = document.getElementById("formHoaks");
+        const robotCheckbox = document.getElementById("robot");
+        const robotBoxOutline = document.getElementById("robotBoxOutline");
+        const robotCheckMark = document.getElementById("robotCheckMark");
+        const requiredFields = reportForm.querySelectorAll("[required]");
+
+        function validateRequiredField(field) {
+            const isValid = field.checkValidity();
+            const feedback = field.nextElementSibling;
+            field.classList.toggle("is-invalid", !isValid);
+
+            if (!isValid) {
+                field.setAttribute("aria-invalid", "true");
+                if (feedback && feedback.classList.contains("invalid-feedback")) {
+                    feedback.textContent = field.validity.valueMissing
+                        ? field.dataset.requiredMessage
+                        : field.dataset.invalidMessage || "Periksa kembali isian ini.";
+                }
+            } else {
+                field.removeAttribute("aria-invalid");
+            }
+
+            return isValid;
+        }
+
+        function showReportNotification(type, title, message) {
+            const isWarning = type === "warning";
+            reportNotification.classList.remove("border-success", "border-warning");
+            reportNotification.classList.add(isWarning ? "border-warning" : "border-success");
+            reportNotificationIcon.classList.remove(
+                "bg-warning-subtle", "text-warning-emphasis", "bg-success-subtle", "text-success-emphasis"
+            );
+            reportNotificationIcon.classList.add(
+                isWarning ? "bg-warning-subtle" : "bg-success-subtle",
+                isWarning ? "text-warning-emphasis" : "text-success-emphasis"
+            );
+            reportNotificationIcon.textContent = isWarning ? "!" : "✓";
+            reportNotification.setAttribute("role", type === "warning" ? "alert" : "status");
+            reportNotification.setAttribute("aria-live", type === "warning" ? "assertive" : "polite");
+            reportNotificationTitle.textContent = title;
+            reportNotificationMessage.textContent = message;
+            reportNotification.hidden = false;
+            reportNotification.classList.add("show");
+        }
+
+        closeReportNotification.addEventListener("click", function() {
+            reportNotification.classList.remove("show");
+            reportNotification.hidden = true;
+        });
+
+        screenshotInput.addEventListener("change", function() {
+            screenshotFileName.textContent = this.files.length > 0
+                ? this.files[0].name
+                : "Belum ada file dipilih";
+        });
+
+        function updateRobotIndicator() {
+            robotBoxOutline.classList.toggle("d-none", robotCheckbox.checked);
+            robotCheckMark.classList.toggle("d-none", !robotCheckbox.checked);
+        }
+
+        updateRobotIndicator();
+        robotCheckbox.addEventListener("change", updateRobotIndicator);
+        robotCheckbox.addEventListener("focus", function() {
+            robotBoxOutline.classList.remove("text-secondary");
+            robotBoxOutline.classList.add("text-primary");
+        });
+        robotCheckbox.addEventListener("blur", function() {
+            robotBoxOutline.classList.remove("text-primary");
+            robotBoxOutline.classList.add("text-secondary");
+        });
+
+        requiredFields.forEach(function(field) {
+            function clearFieldErrorWhenValid() {
+                if (field.classList.contains("is-invalid")) {
+                    validateRequiredField(field);
+                }
+            }
+
+            field.addEventListener("input", clearFieldErrorWhenValid);
+            field.addEventListener("change", clearFieldErrorWhenValid);
+        });
+
+        reportForm.addEventListener("submit", function(event) {
 
             event.preventDefault();
 
-            // Validasi input
-            if (!this.checkValidity()) {
-                this.reportValidity();
+            let formIsValid = true;
+            requiredFields.forEach(function(field) {
+                if (!validateRequiredField(field)) {
+                    formIsValid = false;
+                }
+            });
+
+            if (!formIsValid) {
+                this.querySelector(".is-invalid").focus();
                 return;
             }
 
             // Validasi CAPTCHA simulasi
             if (!document.getElementById("robot").checked) {
-
-                alert("Silakan centang verifikasi terlebih dahulu!");
-
+                showReportNotification(
+                    "warning",
+                    "Verifikasi diperlukan",
+                    "Centang kotak verifikasi sebelum mengirim laporan."
+                );
                 return;
             }
 
-            // Jika valid
-            alert("Formulir berhasil divalidasi!");
+            showReportNotification(
+                "success",
+                "Formulir berhasil divalidasi",
+                "Pengiriman laporan belum aktif, jadi laporan ini belum dikirim ke server."
+            );
+            this.reset();
+            updateRobotIndicator();
+            screenshotFileName.textContent = "Belum ada file dipilih";
 
         });
 
