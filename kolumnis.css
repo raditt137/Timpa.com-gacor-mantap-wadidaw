@@ -198,6 +198,14 @@ a {
     display: none;
 }
 
+.nim-profile {
+    color: #60717e;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 2px 0 3px;
+    letter-spacing: .02em;
+}
+
 @media (min-width: 768px) {
     #daftar-kolumnis > .kolumnis-item {
         width: 33.33333333%;
