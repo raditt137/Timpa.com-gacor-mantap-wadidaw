@@ -125,8 +125,8 @@
         </h1>
 
         <div class="search-controls" aria-label="Urutkan hasil pencarian">
-          <button class="search-filter-button active" type="button" aria-pressed="true">Relevansi</button>
-          <button class="search-filter-button" type="button" aria-pressed="false">Terbaru</button>
+          <button class="search-filter-button active" type="button" data-sort="relevansi" aria-pressed="true">Relevansi</button>
+          <button class="search-filter-button" type="button" data-sort="terbaru" aria-pressed="false">Terbaru</button>
           <div class="search-filter-wrap">
             <button class="search-filter-icon" type="button" aria-label="Buka filter pencarian" aria-expanded="false" aria-controls="search-filter-panel">
               <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -170,159 +170,255 @@
         </div>
 
         <div class="search-results">
-          <article class="search-result">
+          <article class="search-result" data-search-type="artikel">
             <a class="search-result-image" href="isi-berita.html">
               <img src="assets/img/foto2.webp" alt="Presiden Prabowo Subianto sedang berbicara" loading="lazy">
             </a>
             <div class="search-result-copy">
               <span class="category-label">Nasional</span>
               <h2><a href="isi-berita.html">Prabowo: Mereka yang Serakah dan Bermental Mafia Pasti Akan Gagal</a></h2>
-              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 2 November 2026</p>
+              <p class="search-result-meta">Artikel <span aria-hidden="true">·</span> 2 November 2026</p>
               <p class="search-result-excerpt">Prabowo mengingatkan bahwa pihak yang tidak setia kepada Pancasila dan NKRI serta berniat merampok kekayaan negara akan menemui kegagalan.</p>
             </div>
           </article>
 
-          <article class="search-result">
+          <article class="search-result" data-search-type="artikel">
             <a class="search-result-image" href="isi-berita.html">
               <img src="assets/img/foto6.webp" alt="Kapolri Jenderal Listyo Sigit Prabowo" loading="lazy">
             </a>
             <div class="search-result-copy">
               <span class="category-label">Nasional</span>
               <h2><a href="isi-berita.html">Menelusuri Dalang Penyadapan Presiden Prabowo</a></h2>
-              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 2 November 2026</p>
+              <p class="search-result-meta">Artikel <span aria-hidden="true">·</span> 2 November 2026</p>
               <p class="search-result-excerpt">Simak laporan Timpa.com mengenai dugaan penyadapan terhadap Presiden Prabowo dan perkembangan penyelidikannya.</p>
             </div>
           </article>
 
-          <article class="search-result">
+          <article class="search-result" data-search-type="artikel">
             <a class="search-result-image" href="isi-berita.html">
               <img src="assets/img/foto2.webp" alt="Presiden Prabowo Subianto dalam sebuah acara" loading="lazy">
             </a>
             <div class="search-result-copy">
               <span class="category-label">Nasional</span>
               <h2><a href="isi-berita.html">Prabowo Resmikan SMA Taruna Nusantara Kampus Cimahi</a></h2>
-              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 30 Oktober 2026</p>
+              <p class="search-result-meta">Artikel <span aria-hidden="true">·</span> 30 Oktober 2026</p>
               <p class="search-result-excerpt">Presiden Prabowo meresmikan kampus baru SMA Taruna Nusantara di Cimahi, Jawa Barat, sekaligus menyampaikan pesan tentang persatuan.</p>
             </div>
           </article>
 
-          <article class="search-result">
+          <article class="search-result" data-search-type="artikel">
             <a class="search-result-image" href="isi-berita.html">
               <img src="assets/img/foto1.webp" alt="Presiden Prabowo Subianto menghadiri acara kenegaraan" loading="lazy">
             </a>
             <div class="search-result-copy">
               <span class="category-label">Nasional</span>
               <h2><a href="isi-berita.html">Prabowo Tekankan Pentingnya Persatuan untuk Menjaga Keutuhan Bangsa</a></h2>
-              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 28 Oktober 2026</p>
+              <p class="search-result-meta">Artikel <span aria-hidden="true">·</span> 28 Oktober 2026</p>
               <p class="search-result-excerpt">Presiden Prabowo mengajak seluruh elemen masyarakat menjaga persatuan dan mengutamakan kepentingan bangsa.</p>
             </div>
           </article>
 
-          <article class="search-result">
+                    <article class="search-result" data-search-type="artikel">
             <a class="search-result-image" href="isi-berita.html">
               <img src="assets/img/foto3.webp" alt="Kegiatan pendidikan di sekolah" loading="lazy">
             </a>
             <div class="search-result-copy">
               <span class="category-label">Pendidikan</span>
               <h2><a href="isi-berita.html">Prabowo Dorong Pemerataan Akses Pendidikan di Berbagai Daerah</a></h2>
-              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 25 Oktober 2026</p>
+              <p class="search-result-meta">Artikel <span aria-hidden="true">·</span> 25 Oktober 2026</p>
               <p class="search-result-excerpt">Pemerintah menyoroti pemerataan sarana pendidikan sebagai salah satu langkah memperkuat kualitas sumber daya manusia.</p>
             </div>
           </article>
 
-          <article class="search-result">
+          <article class="search-result" data-search-type="artikel">
             <a class="search-result-image" href="isi-berita.html">
               <img src="assets/img/foto5.webp" alt="Perempuan menyampaikan keterangan kepada media" loading="lazy">
             </a>
             <div class="search-result-copy">
               <span class="category-label">Nasional</span>
               <h2><a href="isi-berita.html">Prabowo Minta Jajaran Pemerintah Responsif terhadap Aspirasi Masyarakat</a></h2>
-              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 22 Oktober 2026</p>
+              <p class="search-result-meta">Artikel <span aria-hidden="true">·</span> 22 Oktober 2026</p>
               <p class="search-result-excerpt">Presiden meminta jajaran pemerintah mendengar masukan publik dan menindaklanjutinya dengan kebijakan yang tepat.</p>
             </div>
           </article>
 
-          <article class="search-result">
+          <article class="search-result" data-search-type="artikel">
             <a class="search-result-image" href="isi-berita.html">
               <img src="assets/img/foto7.webp" alt="Pelaku usaha mempromosikan produk secara daring" loading="lazy">
             </a>
             <div class="search-result-copy">
               <span class="category-label">Ekonomi</span>
               <h2><a href="isi-berita.html">Prabowo Bahas Penguatan UMKM dan Penciptaan Lapangan Kerja</a></h2>
-              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 20 Oktober 2026</p>
+              <p class="search-result-meta">Artikel <span aria-hidden="true">·</span> 20 Oktober 2026</p>
               <p class="search-result-excerpt">Penguatan usaha kecil dan penciptaan lapangan kerja menjadi bagian dari agenda pemerintah untuk mendorong ekonomi nasional.</p>
             </div>
           </article>
 
-          <article class="search-result">
+          <article class="search-result" data-search-type="artikel">
             <a class="search-result-image" href="isi-berita.html">
               <img src="assets/img/foto8.webp" alt="Beragam obat tersusun di atas meja" loading="lazy">
             </a>
             <div class="search-result-copy">
               <span class="category-label">Kesehatan</span>
               <h2><a href="isi-berita.html">Prabowo Soroti Penguatan Layanan Kesehatan bagi Masyarakat</a></h2>
-              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 18 Oktober 2026</p>
+              <p class="search-result-meta">Artikel <span aria-hidden="true">·</span> 18 Oktober 2026</p>
               <p class="search-result-excerpt">Peningkatan akses dan mutu layanan kesehatan menjadi salah satu perhatian dalam agenda pembangunan nasional.</p>
             </div>
           </article>
 
-          <article class="search-result">
+          <article class="search-result" data-search-type="artikel">
             <a class="search-result-image" href="isi-berita.html">
               <img src="assets/img/foto9.webp" alt="Ilustrasi perlindungan dan keselamatan masyarakat" loading="lazy">
             </a>
             <div class="search-result-copy">
               <span class="category-label">Nasional</span>
               <h2><a href="isi-berita.html">Prabowo Ajak Masyarakat Waspada terhadap Provokasi yang Memecah Belah</a></h2>
-              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 15 Oktober 2026</p>
+              <p class="search-result-meta">Artikel <span aria-hidden="true">·</span> 15 Oktober 2026</p>
               <p class="search-result-excerpt">Presiden mengingatkan pentingnya menjaga kerukunan dan tidak mudah terpengaruh informasi yang memicu perpecahan.</p>
             </div>
           </article>
 
-          <article class="search-result">
+          <article class="search-result" data-search-type="artikel">
             <a class="search-result-image" href="isi-berita.html">
               <img src="assets/img/foto10.webp" alt="Suasana aktivitas perdagangan di Makassar" loading="lazy">
             </a>
             <div class="search-result-copy">
               <span class="category-label">Regional</span>
               <h2><a href="isi-berita.html">Prabowo Minta Program Pemerintah Berdampak hingga ke Daerah</a></h2>
-              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 12 Oktober 2026</p>
+              <p class="search-result-meta">Artikel <span aria-hidden="true">·</span> 12 Oktober 2026</p>
               <p class="search-result-excerpt">Pemerintah didorong memastikan manfaat program pembangunan dapat dirasakan masyarakat di seluruh wilayah.</p>
             </div>
           </article>
 
-          <article class="search-result">
+          <article class="search-result" data-search-type="artikel">
             <a class="search-result-image" href="isi-berita.html">
               <img src="assets/img/foto4.webp" alt="Personel kepolisian dalam kegiatan pengamanan" loading="lazy">
             </a>
             <div class="search-result-copy">
               <span class="category-label">Nasional</span>
               <h2><a href="isi-berita.html">Prabowo Ingatkan Pentingnya Kewaspadaan dan Stabilitas Nasional</a></h2>
-              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 9 Oktober 2026</p>
+              <p class="search-result-meta">Artikel <span aria-hidden="true">·</span> 9 Oktober 2026</p>
               <p class="search-result-excerpt">Presiden menekankan kewaspadaan bersama untuk menjaga keamanan, stabilitas, dan persatuan nasional.</p>
             </div>
           </article>
 
-          <article class="search-result">
+          <article class="search-result" data-search-type="artikel">
             <a class="search-result-image" href="isi-berita.html">
               <img src="assets/img/foto6.webp" alt="Suasana ruang pemantauan teknologi" loading="lazy">
             </a>
             <div class="search-result-copy">
               <span class="category-label">Tekno</span>
               <h2><a href="isi-berita.html">Prabowo Dorong Pemanfaatan Teknologi untuk Meningkatkan Pelayanan Publik</a></h2>
-              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 7 Oktober 2026</p>
+              <p class="search-result-meta">Artikel <span aria-hidden="true">·</span> 7 Oktober 2026</p>
               <p class="search-result-excerpt">Pemanfaatan teknologi dinilai dapat membantu pemerintah menghadirkan layanan publik yang lebih mudah dijangkau.</p>
             </div>
           </article>
 
-          <article class="search-result">
+          <article class="search-result" data-search-type="artikel">
             <a class="search-result-image" href="isi-berita.html">
               <img src="assets/img/foto1.webp" alt="Presiden Prabowo bersama tokoh masyarakat" loading="lazy">
             </a>
             <div class="search-result-copy">
               <span class="category-label">Nasional</span>
               <h2><a href="isi-berita.html">Prabowo Menjaga Jarak Aman dengan Jokowi</a></h2>
-              <p class="search-result-meta">Timpa News <span aria-hidden="true">·</span> 6 Oktober 2026</p>
+              <p class="search-result-meta">Artikel <span aria-hidden="true">·</span> 6 Oktober 2026</p>
               <p class="search-result-excerpt">Prabowo tidak sedang meninggalkan Jokowi. Ia sedang mengatur jaraknya. Politik jarak aman sedang bekerja di Istana.</p>
+            </div>
+          </article>
+
+          <article class="search-result video-result" data-search-type="video">
+            <a class="search-result-image" href="isi-berita.html">
+              <img src="assets/video/thumbnail silat.webp" alt="Thumbnail GAYA SILAT Prabowo di MPR" loading="lazy">
+              <span class="video-duration">4:32</span>
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Video</span>
+              <h2><a href="isi-berita.html">GAYA SILAT Prabowo di MPR! Serahkan 2 Nama Cawapres Pengganti Gibran Tanggal 23 Nov 26</a></h2>
+              <p class="search-result-meta">Video <span aria-hidden="true">·</span> 23 November 2026</p>
+            </div>
+          </article>
+
+          <article class="search-result video-result" data-search-type="video">
+            <a class="search-result-image" href="isi-berita.html">
+              <img src="assets/video/Gibran Sebut Prabowo sudah Seperti Ayahnya Sendiri.webp" alt="Gibran Sebut Prabowo sudah Seperti Ayahnya Sendiri" loading="lazy">
+              <span class="video-duration">2:48</span>
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Video</span>
+              <h2><a href="isi-berita.html">Gibran Sebut Prabowo sudah Seperti Ayahnya Sendiri</a></h2>
+              <p class="search-result-meta">Video <span aria-hidden="true">·</span> 22 November 2026</p>
+            </div>
+          </article>
+
+          <article class="search-result video-result" data-search-type="video">
+            <a class="search-result-image" href="isi-berita.html">
+              <img src="assets/video/Prabowo Gratiskan Biaya Pendidikan Seluruh Siswa SMA Taruna Nusantara.webp" alt="Prabowo Gratiskan Biaya Pendidikan Seluruh Siswa SMA Taruna Nusantara" loading="lazy">
+              <span class="video-duration">3:16</span>
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Video</span>
+              <h2><a href="isi-berita.html">Prabowo Gratiskan Biaya Pendidikan Seluruh Siswa SMA Taruna Nusantara</a></h2>
+              <p class="search-result-meta">Video <span aria-hidden="true">·</span> 21 November 2026</p>
+            </div>
+          </article>
+
+          <article class="search-result video-result" data-search-type="video">
+            <a class="search-result-image" href="isi-berita.html">
+              <img src="assets/video/Prabowo Kalau Mau Tahu Rasanya Kalah, Tanya Prabowo Subianto.webp" alt="Prabowo Kalau Mau Tahu Rasanya Kalah, Tanya Prabowo Subianto" loading="lazy">
+              <span class="video-duration">5:04</span>
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Video</span>
+              <h2><a href="isi-berita.html">Prabowo Kalau Mau Tahu Rasanya Kalah, Tanya Prabowo Subianto</a></h2>
+              <p class="search-result-meta">Video <span aria-hidden="true">·</span> 20 November 2026</p>
+            </div>
+          </article>
+
+          <article class="search-result video-result" data-search-type="video">
+            <a class="search-result-image" href="isi-berita.html">
+              <img src="assets/video/Prabowo Resmikan SMA Taruna Nusantara Kampus Cimahi.webp" alt="Prabowo Resmikan SMA Taruna Nusantara Kampus Cimahi" loading="lazy">
+              <span class="video-duration">3:52</span>
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Video</span>
+              <h2><a href="isi-berita.html">Prabowo Resmikan SMA Taruna Nusantara Kampus Cimahi</a></h2>
+              <p class="search-result-meta">Video <span aria-hidden="true">·</span> 19 November 2026</p>
+            </div>
+          </article>
+
+          <article class="search-result video-result" data-search-type="video">
+            <a class="search-result-image" href="isi-berita.html">
+              <img src="assets/video/Rupiah Berpotensi Terkoreksi Setelah Jadi Mata Uang Terkuat di Asia.webp" alt="Rupiah Berpotensi Terkoreksi Setelah Jadi Mata Uang Terkuat di Asia" loading="lazy">
+              <span class="video-duration">4:11</span>
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Video</span>
+              <h2><a href="isi-berita.html">Rupiah Berpotensi Terkoreksi Setelah Jadi Mata Uang Terkuat di Asia</a></h2>
+              <p class="search-result-meta">Video <span aria-hidden="true">·</span> 18 November 2026</p>
+            </div>
+          </article>
+
+          <article class="search-result video-result" data-search-type="video">
+            <a class="search-result-image" href="isi-berita.html">
+              <img src="assets/video/Singgung Pengkhianatan, Prabowo_ Kekuasaan Sangat Menggoda.webp" alt="Singgung Pengkhianatan, Prabowo: Kekuasaan Sangat Menggoda" loading="lazy">
+              <span class="video-duration">2:56</span>
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Video</span>
+              <h2><a href="isi-berita.html">Singgung Pengkhianatan, Prabowo_ Kekuasaan Sangat Menggoda</a></h2>
+              <p class="search-result-meta">Video <span aria-hidden="true">·</span> 17 November 2026</p>
+            </div>
+          </article>
+
+          <article class="search-result video-result" data-search-type="video">
+            <a class="search-result-image" href="isi-berita.html">
+              <img src="assets/video/thumbnail silat.webp" alt="Thumbnail video GAYA SILAT Prabowo di MPR" loading="lazy">
+              <span class="video-duration">1:44</span>
+            </a>
+            <div class="search-result-copy">
+              <span class="category-label">Video</span>
+              <h2><a href="isi-berita.html">GAYA SILAT Prabowo di MPR: Momen Pilihan</a></h2>
+              <p class="search-result-meta">Video <span aria-hidden="true">·</span> 16 November 2026</p>
             </div>
           </article>
         </div>
@@ -416,7 +512,10 @@
     const query = searchParams.get("q") || "Prabowo";
     const normalizedQuery = query.trim().toLocaleLowerCase("id");
     const resultCards = [...document.querySelectorAll(".search-result")];
-    const pageSize = 5;
+    const activeSearchType = searchParams.get("type") || "";
+    let activeSort = searchParams.get("sort") === "terbaru" ? "terbaru" : "relevansi";
+    const isVideoListing = normalizedQuery === "video";
+    const pageSize = isVideoListing ? 8 : 5;
     const pagination = document.querySelector(".search-pagination");
     const filterButton = document.querySelector(".search-filter-icon");
     const filterPanel = document.querySelector(".search-filter-panel");
@@ -430,6 +529,13 @@
 
     searchInput.value = query;
     document.querySelector(".search-query").textContent = `“${query}”`;
+    if (isVideoListing) {
+      document.querySelector(".search-page").classList.add("video-listing");
+      document.querySelector(".search-tabs").hidden = true;
+      document.querySelector(".search-controls").hidden = true;
+      document.querySelector(".search-query").hidden = true;
+      document.title = "Video terbaru | Timpa.com";
+    }
     channelSelect.value = searchParams.get("channel") || "";
     const activeDateFilter = searchParams.get("date") || "any";
     const activeDateRadio = document.querySelector(
@@ -439,6 +545,11 @@
     selectedDateInput.value = searchParams.get("selectedDate") || searchParams.get("from") || "";
     dateRange.hidden = activeDateFilter !== "custom";
     selectedDateInput.required = activeDateFilter === "custom";
+    document.querySelectorAll(".search-filter-button[data-sort]").forEach((button) => {
+      const isActive = button.dataset.sort === activeSort;
+      button.classList.toggle("active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+    });
 
     const parseResultDate = (result) => {
       const meta = result.querySelector(".search-result-meta").textContent;
@@ -462,7 +573,9 @@
         : null;
 
       return resultCards.filter((result) => {
-        if (!result.textContent.toLocaleLowerCase("id").includes(normalizedQuery)) return false;
+        if (isVideoListing && result.dataset.searchType !== "video") return false;
+        if (!isVideoListing && !result.textContent.toLocaleLowerCase("id").includes(normalizedQuery)) return false;
+        if (activeSearchType && result.dataset.searchType !== activeSearchType) return false;
         const category = result.querySelector(".category-label").textContent.trim();
         if (selectedChannel && category !== selectedChannel) return false;
 
@@ -492,6 +605,15 @@
 
     const renderResults = () => {
       const filteredResults = getFilteredResults();
+      if (activeSort === "terbaru") {
+        filteredResults.sort((first, second) => {
+          const firstDate = parseResultDate(first);
+          const secondDate = parseResultDate(second);
+          if (!firstDate) return 1;
+          if (!secondDate) return -1;
+          return secondDate.getTime() - firstDate.getTime();
+        });
+      }
       const pageCount = Math.ceil(filteredResults.length / pageSize);
       const requestedPage = Number.parseInt(searchParams.get("page") || "1", 10);
       const currentPage = Number.isFinite(requestedPage)
@@ -501,9 +623,18 @@
         (currentPage - 1) * pageSize,
         currentPage * pageSize
       );
+      const resultsContainer = document.querySelector(".search-results");
+      if (activeSort === "terbaru") {
+        [...filteredResults, ...resultCards.filter((result) => !filteredResults.includes(result))]
+          .forEach((result) => resultsContainer.append(result));
+      } else {
+        resultCards.forEach((result) => resultsContainer.append(result));
+      }
 
       document.querySelector(".search-count").textContent =
-        `Ditemukan ${filteredResults.length} hasil untuk`;
+        isVideoListing
+          ? `Ditemukan ${filteredResults.length} video`
+          : `Ditemukan ${filteredResults.length} hasil untuk`;
       resultCards.forEach((result) => {
         result.hidden = !visibleResults.includes(result);
       });
@@ -581,9 +712,30 @@
         closeFilterPanel();
       }
     });
+    document.querySelectorAll(".search-filter-button[data-sort]").forEach((button) => {
+      button.addEventListener("click", () => {
+        activeSort = button.dataset.sort;
+        searchParams.set("sort", activeSort);
+        searchParams.set("page", "1");
+        if (activeSort === "relevansi") searchParams.delete("sort");
+
+        document.querySelectorAll(".search-filter-button[data-sort]").forEach((sortButton) => {
+          const isActive = sortButton === button;
+          sortButton.classList.toggle("active", isActive);
+          sortButton.setAttribute("aria-pressed", String(isActive));
+        });
+
+        window.history.replaceState(
+          null,
+          "",
+          `${window.location.pathname}?${searchParams.toString()}`
+        );
+        renderResults();
+      });
+    });
     renderResults();
 
-    document.querySelectorAll("[data-search-type]").forEach((tab) => {
+    document.querySelectorAll(".search-tab[data-search-type]").forEach((tab) => {
       const tabParams = new URLSearchParams(window.location.search);
       tabParams.set("q", query);
       tabParams.delete("page");
@@ -591,6 +743,14 @@
       if (type) tabParams.set("type", type);
       else tabParams.delete("type");
       tab.href = `search-page.html?${tabParams.toString()}`;
+
+      const isActive = type === activeSearchType;
+      tab.classList.toggle("active", isActive);
+      if (isActive) {
+        tab.setAttribute("aria-current", "page");
+      } else {
+        tab.removeAttribute("aria-current");
+      }
     });
   </script>
 </body> 
