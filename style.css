@@ -1348,6 +1348,14 @@ a {
     margin-bottom: 0;
 }
 
+#robotBoxOutline {
+    transition: fill .18s ease;
+}
+
+#robotIndicator:hover #robotBoxOutline {
+    fill: #e9ecef;
+}
+
 @media (max-width: 991.98px) {
     .video-listing .search-results {
         grid-template-columns: repeat(2, minmax(0, 1fr));
