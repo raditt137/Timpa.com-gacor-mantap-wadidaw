@@ -42,8 +42,8 @@
 }
 
 .video-story-copy {
-  color: #46535d;
-  line-height: 1.75;
+  color: var(--timpa-dark);
+  line-height: 1.5;
 }
 
 .video-recommendation {
